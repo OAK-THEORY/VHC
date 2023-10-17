@@ -1,0 +1,8 @@
+.footer {
+  flex: 1 1 auto;
+  &__copyright{
+    color: $white;
+    font-family: Inter;
+    text-align: center;
+  }
+}

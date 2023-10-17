@@ -1,0 +1,14 @@
+.profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  &__title {
+    color: $orange-50;
+    font-family: Inter;
+  }
+  &__img {
+    width: 100px;
+    height: 100px;
+  }
+}
