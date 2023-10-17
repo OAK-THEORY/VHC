@@ -1,7 +1,7 @@
 {
-  "name": "starter",
+  "name": "VHC",
   "version": "0.0.1",
-  "description": "project",
+  "description": "Vanderbilt Holiday Catalog",
   "main": "./pages/index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nowmdr/mesto.git"
+    "url": "git+https://github.com/OAK-THEORY/VHC.git"
   },
   "author": "Jauhien Lipko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nowmdr/mesto/issues"
+    "url": "https://github.com/OAK-THEORY/VHC/issues"
   },
-  "homepage": "https://github.com/nowmdr/mesto#readme",
+  "homepage": "https://github.com/OAK-THEORY/VHC",
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@babel/preset-env": "^7.22.10",
