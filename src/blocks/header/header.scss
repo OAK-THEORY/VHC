@@ -1,17 +1,55 @@
 .header {
-  height: 100px;
-  background-color: $black;
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
+  @extend .flex-column;
 
-  &__logo {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-image: url("../../images/union.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+  &__top {
+    @include padding-y(13px);
+
+    background-color: $red-800;
+    color: $white;
+  }
+
+  &__info {
+    @extend .uppercase;
+    @extend .m-0;
+    
+
+    font-size: 14px;
+    line-height: 22px;
+
+    &-bolder {
+      font-weight: 700;
+    }    
+  }
+  &__bottom {
+    @extend .container;
+    @extend .flex-row-center-space-between;
+    @include padding-y(35px, 26px);
+  }
+}
+
+.logo {
+  @extend .icon-bg-prop;
+
+  width: 213px;
+  height: 46px;
+  background-image: url("../../images/vanderbilt-university-logo.svg");
+  
+}
+.social-icons {
+  @extend .reset-list;
+  @extend .flex-row;
+
+  gap: 20px;
+  &__item {
+
+  }
+
+  &__link {
+    @include box(12px, 12px);
+    @extend .flex;
+
+    &_white-icon svg path {
+      fill: $white;
+    }
   }
 }

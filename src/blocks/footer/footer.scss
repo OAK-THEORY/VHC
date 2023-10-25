@@ -1,8 +1,13 @@
 .footer {
-  flex: 1 1 auto;
+  @include padding-y(30px);
+
+  flex: 1 1 auto; // do not remove
+  background-color: $black;
   &__copyright{
+    @extend .m-0;
+    
     color: $white;
-    font-family: Inter;
-    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
   }
 }
