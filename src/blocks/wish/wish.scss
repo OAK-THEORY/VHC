@@ -1,0 +1,80 @@
+.wish {
+  display: flex;
+
+  @extend .container;
+  @include desktop-only {
+    justify-content: space-between;
+    gap: 80px;
+    
+    @include padding-y(84px);
+  }
+
+  @include not-desktop {
+    flex-direction: column;
+    row-gap: 30px;
+
+    @include padding-y(62px);
+  }
+  
+
+  &__info {
+    align-items: baseline;
+
+    @extend .flex-column;
+    @include not-mobile {
+      max-width: 320px;
+    }
+
+    @include mobile-only {
+      max-width: 290px;
+    }
+  }
+
+  &__main-img {
+    @include desktop-only {
+      @include box(100%);
+      
+      max-width: 893px;
+    }
+  }
+  &__info-img {
+    @include desktop-only {
+      align-self: end;
+      margin-bottom: 52px;
+
+      @include box(143px, 187px);
+    }
+    @include not-desktop {
+      display: none;
+    }
+  }
+
+  &__title {
+    color: $black;
+    margin-bottom: 14px;
+
+    @extend .m-0;
+    @include not-mobile {
+      @include font-params(24px, 400);
+    }
+
+    @include mobile-only {
+
+      @include font-params(22px, 400);
+    }
+  }
+
+  &__description {
+    margin-bottom: 30px;
+    color: $text;
+
+    @extend .m-0;
+    @include not-mobile {
+      @include font-params(14px, 400, 22px);
+    }
+
+    @include mobile-only {
+      @include font-params(12px, 400, 19px);
+    }
+  }
+}

@@ -10,6 +10,10 @@ $red-800: #531D1D;
 $orange-50: #FFFAF0;
 $yellow-50: #FFFFF0;
 
+$gold: #CFAE70;
+$dark-gold: #946E24;
+$text: #5B5B5B;
+
 $offset-desktop: 30px;
 $offset-tablet: 30px;
 $offset-mobile: 15px;
@@ -21,8 +25,11 @@ $breakpoint-mobile: 767px;
 .container {
   // @include padding-x(30px);
   @include margin-x(auto);
-  @include desktop-only {
+  @include not-mobile {
     max-width: 1280px;
     width: calc(100% - $offset-desktop * 2);
+  }
+  @include mobile-only {
+    width: calc(100% - $offset-mobile * 2);
   }
 }

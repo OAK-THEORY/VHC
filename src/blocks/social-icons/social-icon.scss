@@ -1,0 +1,21 @@
+.social-icons {
+  @extend .reset-list;
+  @extend .flex-row;
+
+  gap: 20px;
+
+  &_mobile-hidden {
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include box(12px, 12px);
+    @extend .flex;
+
+    &_white-icon svg path {
+      fill: $white;
+    }
+  }
+}

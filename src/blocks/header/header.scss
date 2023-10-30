@@ -3,6 +3,9 @@
 
   &__top {
     @include padding-y(13px);
+    @include mobile-only {
+      display: none;
+    }
 
     background-color: $red-800;
     color: $white;
@@ -11,10 +14,7 @@
   &__info {
     @extend .uppercase;
     @extend .m-0;
-    
-
-    font-size: 14px;
-    line-height: 22px;
+    @include font-params(14px, null, 22px);
 
     &-bolder {
       font-weight: 700;
@@ -24,32 +24,8 @@
     @extend .container;
     @extend .flex-row-center-space-between;
     @include padding-y(35px, 26px);
-  }
-}
-
-.logo {
-  @extend .icon-bg-prop;
-
-  width: 213px;
-  height: 46px;
-  background-image: url("../../images/vanderbilt-university-logo.svg");
-  
-}
-.social-icons {
-  @extend .reset-list;
-  @extend .flex-row;
-
-  gap: 20px;
-  &__item {
-
-  }
-
-  &__link {
-    @include box(12px, 12px);
-    @extend .flex;
-
-    &_white-icon svg path {
-      fill: $white;
+    @include mobile-only {
+      flex-direction: row-reverse;
     }
   }
 }

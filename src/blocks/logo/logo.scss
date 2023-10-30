@@ -1,0 +1,5 @@
+@include mobile-only {
+  .logo svg {
+    @include box(100px, 25px);
+  }
+}
