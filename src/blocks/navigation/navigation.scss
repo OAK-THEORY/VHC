@@ -1,0 +1,133 @@
+.navigation {
+  position: relative;
+  
+  &__button {
+    @extend .flex-align-center;
+    @extend .p-0;
+  
+    background: unset;
+    cursor: pointer;
+    border: none;
+    
+    @include not-mobile {
+      gap: 8px;
+   
+      &::before {
+        @include font-params(16px, 500);
+
+        content: 'Collection';
+      }
+      &::after {
+        @include box(24px);
+        
+        content: '';
+        display: block;
+        background-image: url("../../images/navigation/chevron.svg");
+        background-repeat: no-repeat;
+        background-size: unset;
+        background-position: center center;
+        transition: rotate 0.2s ease;
+      }
+
+      &_active::after {
+        rotate: 180deg;
+      }
+    }
+
+    @include mobile-only {
+      &_active {
+        .burger__item:nth-child(1) {
+          top: 5px;
+          transform: rotate(135deg);
+        }
+        .burger__item:nth-child(2) {
+          opacity: 0;
+          left: -5px;
+        }
+        .burger__item:nth-child(3) {
+          top: 5px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  &__list {
+    @extend .reset-list;
+    @extend .flex-column;
+
+    gap: 16px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    padding: 40px 54px 24px 24px;
+    background-color: $white;
+
+    @include mobile-only {
+      padding-top: 24px;
+      left: unset;
+      right: 0;
+    }
+
+    &_active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__link {
+    @include font-params(16px, 500);
+
+    display: block ruby;
+    color: $black;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $dark-gold;
+    }
+  }
+}
+
+.burger {
+  @include box(20px, 12px);
+  @include not-mobile {
+    display: none;
+  }
+
+  position: relative;
+  z-index: -1;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  
+  &__item {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+
+    &:nth-child(2) {
+      top: 5px;
+    }
+
+    &:nth-child(3) {
+      top: 10px;
+    }
+  }
+}

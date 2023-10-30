@@ -2,12 +2,17 @@
 @import "../fonts/libre/libre-caslon-text.css";
 @import "../vendor/normalize.css";
 @import "../vendor/mixins.scss";
-@import "../vendor/global.scss";
 @import "../vendor/variables.scss";
 @import "../vendor/utilities.scss";
+@import "../vendor/global.scss";
 
 
 @import "../blocks/root/root.scss";
 @import "../blocks/header/header.scss";
+@import "../blocks/logo/logo.scss";
+@import "../blocks/social-icons/social-icon.scss";
+@import "../blocks/navigation/navigation.scss";
 @import "../blocks/profile/profile.scss";
+@import "../blocks/wish/wish.scss";
+@import "../blocks/gold-button/gold.button.scss";
 @import "../blocks/footer/footer.scss";
