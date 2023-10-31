@@ -1,5 +1,6 @@
 $white: #ffffff;
 $black: #000000;
+$near-black: #1C1C1C;
 
 $gray-50: #F7FAFC;
 
@@ -10,9 +11,13 @@ $red-800: #531D1D;
 $orange-50: #FFFAF0;
 $yellow-50: #FFFFF0;
 
-$gold: #CFAE70;
+$gold: #C69A33; // accent color
 $dark-gold: #946E24;
 $text: #5B5B5B;
+$catalog-bg: #F5F3EF;
+$very-light-gray: #EEEEEE;
+$product-bg: #F9F9F9;
+$coffee: #80746B;
 
 $offset-desktop: 30px;
 $offset-tablet: 30px;
@@ -23,7 +28,6 @@ $breakpoint-mobile: 767px;
 
 //Container
 .container {
-  // @include padding-x(30px);
   @include margin-x(auto);
   @include not-mobile {
     max-width: 1280px;
@@ -31,5 +35,27 @@ $breakpoint-mobile: 767px;
   }
   @include mobile-only {
     width: calc(100% - $offset-mobile * 2);
+  }
+}
+
+.swiper-container {
+  
+
+  @include margin-x(auto);
+  @include not-mobile {
+    max-width: 1280px;
+    // transform: translateX( calc($offset-desktop / 2));
+  }
+  @include desktop-only {
+    width: calc(100% - $offset-desktop * 2);
+  }
+  @include tablet-only {
+    width: calc(100% - $offset-desktop);
+    transform: translateX( calc($offset-desktop / 2));
+
+  }
+  @include mobile-only {
+    width: calc(100% - $offset-mobile);
+    transform: translateX(calc($offset-mobile / 2));
   }
 }

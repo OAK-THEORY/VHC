@@ -1,0 +1,126 @@
+.catalog {
+  &__banner {
+    max-height: 683px;
+    height: 100%;
+    background-image: url('../../images/catalog/banners/image-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    align-items: end;
+    
+    @extend .flex;
+    @include not-mobile {
+      min-height: 680px;
+
+    }
+    @include mobile-only {
+      min-height: 200px;
+    }
+  }
+
+  &__info {
+
+    @extend .flex-column;
+    @extend .container;
+    @include not-mobile {
+      margin-bottom: 120px;
+    }
+    @include mobile-only {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+
+    @include font-params(48px, 400);
+    @include margin-y(0, 8px);
+    @include mobile-only {
+      @include font-params(20px);
+    }
+  }
+
+  &__description {
+    @extend .m-0;
+    @include font-params(16px, 400, 24px);
+    @include mobile-only {
+      @include font-params(10px, 400, 14px);
+    }
+  }
+
+  &__description,
+  &__title {
+    color: $white;
+  }
+
+  &__swiper {
+    background-color: $catalog-bg;
+    // overflow: hidden;
+
+    @include mobile-only {
+      padding-top: 24px;
+    }
+    
+    & .swiper {
+      // overflow: auto;
+    
+      @include not-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 30px;
+        align-items: flex-end;
+        top: -160px;
+      }
+
+      &-navigation {
+        // position: absolute;
+
+        @extend .flex-row;
+        @include not-mobile {
+          gap: 20px;
+        }
+        @include tablet-only {
+          margin-right: $offset-desktop;
+        }
+        @include mobile-only {
+          margin-top: 24px;
+          gap: 10px;
+        }
+      }
+
+      &-button-prev {
+        background-color: $catalog-bg;
+      }
+
+      &-button-next {
+        background-color: $coffee;
+      } 
+
+      &-button-prev,
+      &-button-next {
+        border-radius: 50px;
+        cursor: pointer;
+        border: none;
+        transition: opacity 0.2s ease;
+
+        @extend .flex-center-center;
+        @extend .p-0;
+        @include not-mobile {
+          @include box(52px);
+        }
+        @include mobile-only {
+          @include box(34px);
+
+          & svg {
+            @include box(8px, 10px);
+          }
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+}
