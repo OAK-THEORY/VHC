@@ -1,10 +1,26 @@
 import './index.scss';
+import { bowlingTeam } from '../data/data';
 import { Component } from '../components/Component.js';
 import { Navigation } from '../components/Navigation';
 import { initCatalogSlider } from '../components/Swiper';
+import Card from '../components/Card';
+import Section from '../components/Section';
 
 document.addEventListener("DOMContentLoaded", () => {
     Component();
     Navigation();
+    
+    function createNewCard(data) {
+        const card = new Card(data, '#slide-card-template');
+        return card.generateCard();
+    }
+   
+    const cardList = new Section({
+        renderer: (item) => {
+            cardList.setItem(createNewCard(item));
+        },
+    }, '.swiper-wrapper');
+    cardList.renderItems(bowlingTeam);
+
     initCatalogSlider();
 });
