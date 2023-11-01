@@ -12,24 +12,16 @@
     @include not-mobile {
       gap: 8px;
    
+      &-icon {
+        transition: rotate 0.2s ease;
+      }
       &::before {
         @include font-params(16px, 500);
 
         content: 'Collection';
       }
-      &::after {
-        @include box(24px);
-        
-        content: '';
-        display: block;
-        background-image: url("../../images/navigation/chevron.svg");
-        background-repeat: no-repeat;
-        background-size: unset;
-        background-position: center center;
-        transition: rotate 0.2s ease;
-      }
 
-      &_active::after {
+      &_active &-icon {
         rotate: 180deg;
       }
     }
@@ -48,6 +40,10 @@
           top: 5px;
           transform: rotate(-135deg);
         }
+      }
+      
+      &-icon {
+       display: none; 
       }
     }
   }
@@ -84,7 +80,8 @@
   &__link {
     @include font-params(16px, 500);
 
-    display: block ruby;
+    display: block;
+    white-space: nowrap;
     color: $black;
     text-decoration: none;
     transition: color 0.2s ease;

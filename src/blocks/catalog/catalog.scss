@@ -72,9 +72,16 @@
         top: -160px;
       }
 
-      &-navigation {
-        // position: absolute;
+      &-wrapper {
+        @extend .m-0;
+        @extend .p-0;
+      } 
 
+      &-slide {
+        height: unset;
+      }
+
+      &-navigation {
         @extend .flex-row;
         @include not-mobile {
           gap: 20px;
@@ -89,7 +96,7 @@
       }
 
       &-button-prev {
-        background-color: $catalog-bg;
+        background-color: $white;
       }
 
       &-button-next {
@@ -123,4 +130,21 @@
     }
   }
 
+}
+
+.grid {
+  background-color: $catalog-bg;
+
+  @include padding-y(40px);
+  
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @extend .container;
+  }
+  &-slide {
+    width: 300px;
+  }
 }

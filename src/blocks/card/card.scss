@@ -2,7 +2,8 @@
   background-color: $white;
   border-radius: 8px;
   border: 1px solid $very-light-gray;
-  // justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
 
   @extend .flex-column;
   @include not-mobile {
@@ -17,6 +18,7 @@
     border: 1px solid $very-light-gray;
     background-color: $product-bg;
     padding: 15px 30px;
+
     @include not-mobile {
       margin-bottom: 40px;
     }
@@ -26,6 +28,11 @@
   }
 
   &__img {
+    max-width: 244px;
+    max-height: 242px;
+    margin: 0 auto;
+    display: block;
+    
     @include box(100%);
   }
 
@@ -69,9 +76,9 @@
 
   &__link {
     color: $gold;
-    // text-decoration: none;
     transition: color 0.2s ease;
     gap: 6px;
+    margin-top: auto;
 
     @extend .uppercase;
     @extend .flex-align-center;
