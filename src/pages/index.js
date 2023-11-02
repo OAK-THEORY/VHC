@@ -2,7 +2,7 @@ import './index.scss';
 import { bowlingTeam } from '../data/data';
 import { Component } from '../components/Component.js';
 import { Navigation } from '../components/Navigation';
-import { initCatalogSlider } from '../components/Swiper';
+import { initCatalogSlider, initBannerSlider } from '../components/Swiper';
 import Card from '../components/Card';
 import Section from '../components/Section';
 
@@ -19,8 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
         renderer: (item) => {
             cardList.setItem(createNewCard(item));
         },
-    }, '.swiper-wrapper');
+    }, '#bowling-team .catalog__swiper .swiper-wrapper');
     cardList.renderItems(bowlingTeam);
 
     initCatalogSlider();
+    initBannerSlider();
 });

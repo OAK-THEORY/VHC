@@ -1,11 +1,10 @@
-
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
+import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
+import 'swiper/css'; 
 // import 'swiper/css/navigation';
 
 export const initCatalogSlider = () => {
-  document.querySelectorAll('.catalog__swiper').forEach((module) => {
+    document.querySelectorAll('.catalog__swiper').forEach((module) => {
       const sliderContainer = module.querySelector('.swiper');
       // const swiperWrapper = module.querySelector('.gravity-block-dynamic-boxes--grid-view');
       // const swiperSlides = module.querySelectorAll('.gravity-block-dynamic-boxes__box');
@@ -45,15 +44,18 @@ export const initCatalogSlider = () => {
               prevEl: prevButton,
           },
           breakpoints: {
-              1025: {
-                  slidesPerView: 3,
-              },
-              767: {
-                  slidesPerView: 2.5,
-              },
-              320: {
-                  slidesPerView: 1.3,
-              },
+                1730: {
+                    slidesPerView: 4.5,
+                },
+                1025: {
+                    slidesPerView: 3.5,
+                },
+                767: {
+                    slidesPerView: 2.5,
+                },
+                320: {
+                    slidesPerView: 1.3,
+                },
           },
           // on: {
           //     // init: (swiper) => Gravity.swiper.addSlidesTabIndex(swiper),
@@ -62,11 +64,28 @@ export const initCatalogSlider = () => {
       });
   });
 };
+export const initBannerSlider = () => {
+    document.querySelectorAll('.catalog__banner').forEach((module) => {
+        const sliderContainer = module.querySelector('.swiper');
+  
+        const swiper = new Swiper(sliderContainer, {
+            // slidesPerView: 1,
+            // spaceBetween: 30,
+            modules: [Autoplay],
+            centeredSlides: true,
+            speed: 2000,            // added(slide speed)
+            // effect: 'fade', 
+            allowTouchMove: false,
+            // crossFade: true,
+            // effect: 'fade',
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            }
+        });
 
-const maybeHideSliderNavigation = (nextButton, prevButton, hide) => {
-  if (hide) {
-      nextButton?.classList.add('d-none');
-      prevButton?.classList.add('d-none');
-  }
-};
+        // swiper.start();
+    });
+}
 
