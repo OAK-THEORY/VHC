@@ -28,12 +28,18 @@
   }
 
   &__img {
-    max-width: 244px;
-    max-height: 242px;
+    // max-width: 244px;
+    // max-height: 242px;
     margin: 0 auto;
     display: block;
     
     @include box(100%);
+    @include not-mobile {
+      max-width: 244px;
+    }
+    @include mobile-only {
+      max-width: 186px;
+    }
   }
 
   &__info {

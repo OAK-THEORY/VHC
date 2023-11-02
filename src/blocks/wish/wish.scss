@@ -9,7 +9,6 @@
     
     @include padding-y(84px);
   }
-
   @include not-desktop {
     flex-direction: column;
     row-gap: 30px;
@@ -17,7 +16,6 @@
     @include padding-y(62px);
   }
   
-
   &__info {
     align-items: baseline;
 
@@ -48,6 +46,45 @@
     left: 0;
 
     @include box(100%);
+  }
+
+  &__video-overlay {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../../images/wish-video-placeholder.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 2;
+
+    @include box(100%);
+    @extend .flex-center-center;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__play-button {
+    border-radius: 50px;
+    background-color: $black-opacity;
+    border: 1px solid $coffee;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+
+    @include box(96px);
+    @extend .flex-center-center;
+    & svg {
+      transition: transform 0.2s ease;
+    }
+    &:hover svg {
+      transform: scale(1.1);
+    }
   }
 
   &__title {

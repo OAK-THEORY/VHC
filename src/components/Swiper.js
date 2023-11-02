@@ -52,15 +52,13 @@ export const initCatalogSlider = () => {
                 },
                 767: {
                     slidesPerView: 2.5,
+                    spaceBetween: 20,
                 },
                 320: {
                     slidesPerView: 1.3,
+                    spaceBetween: 20,
                 },
           },
-          // on: {
-          //     // init: (swiper) => Gravity.swiper.addSlidesTabIndex(swiper),
-          //     // slideChange: (swiper) => Gravity.swiper.addSlidesTabIndex(swiper),
-          // },
       });
   });
 };
@@ -68,24 +66,18 @@ export const initBannerSlider = () => {
     document.querySelectorAll('.catalog__banner').forEach((module) => {
         const sliderContainer = module.querySelector('.swiper');
   
-        const swiper = new Swiper(sliderContainer, {
-            // slidesPerView: 1,
-            // spaceBetween: 30,
+        new Swiper(sliderContainer, {
+        
             modules: [Autoplay],
             centeredSlides: true,
-            speed: 2000,            // added(slide speed)
-            // effect: 'fade', 
+            speed: 2000,            
             allowTouchMove: false,
-            // crossFade: true,
-            // effect: 'fade',
             loop: true,
             autoplay: {
                 delay: 3500,
                 disableOnInteraction: false,
             }
         });
-
-        // swiper.start();
     });
 }
 
