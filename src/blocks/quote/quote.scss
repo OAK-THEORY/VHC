@@ -1,0 +1,115 @@
+.quote {
+  background-color: $catalog-bg;
+  &_v1 {
+    
+    @include padding-y(45px, 65px);
+    .quote__image-wrapper {
+    
+      @include desktop-only {
+        min-width: 400px;
+      
+        // @include box(400px, 290px);
+      }
+      @include tablet-only {
+        min-width: 300px;
+        // max-height: 290px;
+      }
+      @include mobile-only {
+        min-width: 220px;
+        // max-height: 165px;
+      }
+    }
+  }
+  
+  &__wrapper {
+    justify-content: center;
+    
+
+    @extend .container;
+    @extend .flex-align-center;
+    @include desktop-only {
+      column-gap: 100px;
+    }
+    @include tablet-only {
+      column-gap: 50px;
+
+    }
+    @include mobile-only {
+      flex-direction: column-reverse;
+      align-items: baseline;
+      gap: 40px;
+    }
+  }
+
+  &__info {
+    gap: 16px;
+    max-width: 538px;
+
+    @extend .flex-column;
+  }
+
+  &__title {
+    color: $black;
+    margin-left: 10px;
+
+    @extend .m-0;
+    @include not-mobile {
+      @include font-params(26px, 400);
+    }
+
+    @include mobile-only {
+      @include font-params(16px, 400);
+    }
+
+    & q {
+      display: block;
+      text-indent: -10px;
+      @include mobile-only {
+        text-indent: -7px;
+      }
+    }
+  }
+
+  &__author {
+    gap: 13px;
+
+    @extend .flex-align-center;
+
+    &-name {
+      color: $coffee;
+  
+      @extend .uppercase;
+      @include font-params(12px, 700, 19px, 2px);
+      
+      
+    }
+    &-img {
+      @include not-mobile {
+        @include box(50px);
+      }
+      @include mobile-only {
+        @include box(36px);
+      }
+    }
+  }
+  &__image-wrapper {
+    
+    @include desktop-only {
+      min-width: 400px;
+    
+      // @include box(400px, 290px);
+    }
+    @include tablet-only {
+      min-width: 300px;
+      // max-height: 290px;
+    }
+    @include mobile-only {
+      min-width: 220px;
+      // max-height: 165px;
+    }
+  }
+
+  &__image {
+    @include box(100%, auto);
+  }
+}
