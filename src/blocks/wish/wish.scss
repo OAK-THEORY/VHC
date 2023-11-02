@@ -4,6 +4,7 @@
   @extend .container;
   @include desktop-only {
     justify-content: space-between;
+    align-items: center;
     gap: 80px;
     
     @include padding-y(84px);
@@ -30,23 +31,23 @@
     }
   }
 
-  &__main-img {
+  &__video-wrapper {
     @include desktop-only {
       @include box(100%);
       
       max-width: 893px;
     }
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+    overflow: hidden;
   }
-  &__info-img {
-    @include desktop-only {
-      align-self: end;
-      margin-bottom: 52px;
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-      @include box(143px, 187px);
-    }
-    @include not-desktop {
-      display: none;
-    }
+    @include box(100%);
   }
 
   &__title {

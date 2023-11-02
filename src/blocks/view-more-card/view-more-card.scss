@@ -1,0 +1,50 @@
+.view-more-card {
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px solid $very-light-gray;
+  height: 100%;
+  box-sizing: border-box;
+  gap: 30px;
+
+  @extend .flex-column;
+  @include not-mobile {
+    padding: 30px 30px 54px 30px;
+  }
+  @include mobile-only {
+    padding: 18px 18px 30px 18px;
+  }
+
+  &__logo-wrapper {
+    background-color: $black-50;
+    border-radius: 4px;
+    height: 100%;
+
+    @extend .flex-center-center;
+  }
+
+  &__logo {
+    max-width: 225px;
+    max-height: 225px;
+
+    @include box(100%);
+  }
+
+  &__link {
+    color: $black;
+    transition: opacity 0.2s ease;
+
+    @extend .card__link;
+    
+    & svg path {
+      fill: $black;
+    }
+    &:hover {
+      color: $black;
+      opacity: 0.7;
+
+      & svg path {
+        fill: $black;
+      }
+    }
+  }
+}

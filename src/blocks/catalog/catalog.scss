@@ -1,32 +1,39 @@
 .catalog {
   &__banner {
-    max-height: 683px;
+    position:  relative;
+    // max-height: 683px;
     height: 100%;
-    background-image: url('../../images/catalog/banners/image-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     align-items: end;
     
-    @extend .flex;
+    // @extend .flex;
     @include not-mobile {
-      min-height: 680px;
+      min-height: 683px;
 
     }
     @include mobile-only {
-      min-height: 200px;
+      max-height: 200px;
+    }
+
+    & .swiper {
+      @include mobile-only {
+        max-height: 200px;
+      }
     }
   }
 
   &__info {
-
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    
     @extend .flex-column;
-    @extend .container;
+    // @extend .container;
     @include not-mobile {
-      margin-bottom: 120px;
+      bottom: 120px;
     }
     @include mobile-only {
-      margin-bottom: 24px;
+      bottom: 24px;
     }
   }
 
@@ -55,14 +62,13 @@
 
   &__swiper {
     background-color: $catalog-bg;
-    // overflow: hidden;
 
     @include mobile-only {
       padding-top: 24px;
     }
     
     & .swiper {
-      // overflow: auto;
+      margin-right: unset;
     
       @include not-mobile {
         display: flex;
@@ -80,11 +86,22 @@
       &-slide {
         height: unset;
       }
-
       &-navigation {
+    
+        // @extend .container;
         @extend .flex-row;
+        @include desktop-only {
+          transform: translateX(-20px);
+        }
         @include not-mobile {
           gap: 20px;
+          justify-content: flex-end;
+          
+          @include margin-x(auto);
+          @include not-mobile {
+            max-width: 1280px;
+            width: calc(100% - $offset-desktop * 2);
+          }
         }
         @include tablet-only {
           margin-right: $offset-desktop;
@@ -94,22 +111,21 @@
           gap: 10px;
         }
       }
-
       &-button-prev {
         background-color: $white;
       }
-
+    
       &-button-next {
         background-color: $coffee;
       } 
-
+    
       &-button-prev,
       &-button-next {
         border-radius: 50px;
         cursor: pointer;
         border: none;
         transition: opacity 0.2s ease;
-
+    
         @extend .flex-center-center;
         @extend .p-0;
         @include not-mobile {
@@ -117,34 +133,43 @@
         }
         @include mobile-only {
           @include box(34px);
-
+    
           & svg {
             @include box(8px, 10px);
           }
         }
-
+    
         &:hover {
           opacity: 0.8;
         }
       }
     }
   }
-
 }
 
-.grid {
-  background-color: $catalog-bg;
+#bowling-team {
+  .catalog__banner {
+    .swiper {
+      height: 683px;
 
-  @include padding-y(40px);
-  
-  &-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-
-    @extend .container;
-  }
-  &-slide {
-    width: 300px;
+      &-banner {
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        @include box(100%);
+        @include not-mobile {
+          background-position: center center;
+        }
+        @include mobile-only {
+          background-position: 50% 30%;
+        }
+        &_1 {
+          background-image: url(../../images/catalog/banners/bowling-team/bowling-team-2.jpg);
+        }
+        &_2 {
+          background-image: url(../../images/catalog/banners/bowling-team/bowling-team-1.jpg);
+        }
+      }
+    }
   }
 }

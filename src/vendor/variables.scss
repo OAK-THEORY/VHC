@@ -1,5 +1,6 @@
 $white: #ffffff;
 $black: #000000;
+$black-50: #221F21;
 $near-black: #1C1C1C;
 
 $gray-50: #F7FAFC;
@@ -39,23 +40,29 @@ $breakpoint-mobile: 767px;
 }
 
 .swiper-container {
-  
-
   @include margin-x(auto);
+  
   @include not-mobile {
-    max-width: 1280px;
+    // max-width: 1280px;
     // transform: translateX( calc($offset-desktop / 2));
   }
   @include desktop-only {
-    width: calc(100% - $offset-desktop * 2);
+    width: calc(100% - $offset-desktop);
+    // width: calc(100% - $offset-desktop * 2);
+    // transform: translateX( calc($offset-desktop / 2));
   }
   @include tablet-only {
-    width: calc(100% - $offset-desktop);
-    transform: translateX( calc($offset-desktop / 2));
+    width: calc(100% - $offset-tablet);
+    // width: calc(100% - $offset-desktop);
+    // transform: translateX( calc($offset-desktop / 2));
 
   }
   @include mobile-only {
     width: calc(100% - $offset-mobile);
-    transform: translateX(calc($offset-mobile / 2));
+    // transform: translateX(calc($offset-mobile / 2));
+  }
+  @include media-custom-min(1340px) {
+    // max-width: unset;
+    // width: calc(100% - 30px);
   }
 }
