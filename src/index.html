@@ -106,11 +106,19 @@
         </header>
         <main class="content">
             <section class="hero">
-                <img src="<%=require('../images/hero-placeholder.png')%>" alt="" class="hero__img">
+                <h1 class="hero__title">Vanderbilt</h1>
+                <p class="hero__subtitle">Holiday Gift Guide 2023</p>
             </section>
             <section class="wish">
                 <div class="wish__video-wrapper">
-                    <video preload="auto" class="wish__video" controls muted autoplay loop>
+                    <div class="wish__video-overlay">
+                        <button class="wish__play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M46.496 32.5942C48.4975 31.4398 48.4975 28.5513 46.496 27.3968L20.4989 12.4017C18.4989 11.2481 16 12.6916 16 15.0004V44.9906C16 47.2995 18.4989 48.7429 20.4989 47.5893L46.496 32.5942Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <video preload="none" class="wish__video" controls muted>
                         <source src="<%=require('../video/wish-video.webm')%>" type="video/webm">
                         <source src="<%=require('../video/wish-video.mp4')%>" type="video/mp4">
                     </video>

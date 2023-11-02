@@ -1,5 +1,57 @@
 .hero {
+  min-height: 542px;
+  background-image: url(../../images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  flex-direction: column;
+  
+
+  @extend .flex-center-center;
+  @include not-mobile {
+    gap: 20px;
+  }
+  @include mobile-only {
+    gap: 10px;
+  }
   &__img {
     @include box(100%, auto);
+  }
+
+  &__title,
+  &__subtitle {
+    display: block;
+    color: $white;
+
+    @extend .m-0;
+  }
+
+  &__title {
+    // text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
+    @include desktop-only {
+      @include font-params(170px, 400, 160px, -2.206px);
+    }
+    @include tablet-only {
+      @include font-params(100px, 400, 90px, -1.5px);
+    }
+    @include mobile-only {
+      @include font-params(80px, 400, 90px, -0.798px);
+    }
+    
+  }
+  &__subtitle {
+    color: $gray-50;
+    
+    
+    @include desktop-only {
+      @include font-params(24px, 700, null, 6.84px);
+    }
+    @include tablet-only {
+      @include font-params(16px, 700, null, 5px);
+    }
+    @include mobile-only {
+      @include font-params(14px, 700, null, 4px);
+    }
+    @extend .uppercase;
   }
 }
