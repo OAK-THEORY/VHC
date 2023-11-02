@@ -1,0 +1,5 @@
+.hero {
+  &__img {
+    @include box(100%, auto);
+  }
+}
