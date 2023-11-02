@@ -79,6 +79,7 @@
     transition: color 0.2s ease;
     gap: 6px;
     margin-top: auto;
+    text-decoration: none;
 
     @extend .uppercase;
     @extend .flex-align-center;
