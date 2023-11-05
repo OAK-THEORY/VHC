@@ -1,14 +1,21 @@
 .header {
   @extend .flex-column;
+  @include not-mobile {
+    padding-top: 48px;
+  }
 
   &__top {
+    background-color: $red-800;
+    color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
     @include padding-y(13px);
     @include mobile-only {
       display: none;
     }
-
-    background-color: $red-800;
-    color: $white;
   }
 
   &__info {
