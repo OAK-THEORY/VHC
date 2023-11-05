@@ -4,5 +4,5 @@
     font-weight: 400;
     font-display: swap;
     src: url('libre-caslon-text_regular.woff') format('woff'),
-         url('libre-caslon-text_regular.ttf') format('truetype'),
+         /* url('libre-caslon-text_regular.ttf') format('truetype'), */
 }

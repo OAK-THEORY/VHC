@@ -4,7 +4,7 @@
   font-weight: 400;
   font-display: swap;
   src: url("Inter-Regular.woff2?v=3.19") format("woff2"),
-       url("Inter-Regular.woff?v=3.19") format("woff");
+       /* url("Inter-Regular.woff?v=3.19") format("woff"); */
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-weight: 500;
   font-display: swap;
   src: url("Inter-Medium.woff2?v=3.19") format("woff2"),
-       url("Inter-Medium.woff?v=3.19") format("woff");
+       /* url("Inter-Medium.woff?v=3.19") format("woff"); */
 }
 
 @font-face {
@@ -22,7 +22,7 @@
   font-weight: 600;
   font-display: swap;
   src: url("Inter-SemiBold.woff2?v=3.19") format("woff2"),
-       url("Inter-SemiBold.woff?v=3.19") format("woff");
+       /* url("Inter-SemiBold.woff?v=3.19") format("woff"); */
 }
 
 @font-face {
@@ -31,5 +31,5 @@
   font-weight: 700;
   font-display: swap;
   src: url("Inter-Bold.woff2?v=3.19") format("woff2"),
-       url("Inter-Bold.woff?v=3.19") format("woff");
+       /* url("Inter-Bold.woff?v=3.19") format("woff"); */
 }
