@@ -1,5 +1,5 @@
 import './index.scss';
-import { bowlingTeam } from '../data/data';
+import { bowlingTeam } from '../data/bowlingTeam.js';
 import { Component } from '../components/Component.js';
 import { Navigation } from '../components/Navigation';
 import { initCatalogSlider, initBannerSlider } from '../components/Swiper';

@@ -44,9 +44,9 @@ export const initCatalogSlider = () => {
               prevEl: prevButton,
           },
           breakpoints: {
-                1730: {
-                    slidesPerView: 4.5,
-                },
+                // 1730: {
+                //     slidesPerView: 4.5,
+                // },
                 1025: {
                     slidesPerView: 3.5,
                 },
