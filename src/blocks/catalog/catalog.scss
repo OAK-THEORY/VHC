@@ -201,3 +201,30 @@
     }
   }
 }
+
+#graduate-hotel {
+  .catalog__banner {
+    .swiper {
+      height: 683px;
+
+      &-banner {
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        @include box(100%);
+        @include not-mobile {
+          background-position: center center;
+        }
+        @include mobile-only {
+          background-position: 50% 30%;
+        }
+        &_1 {
+          background-image: url(../../images/catalog/banners/graduate-hotel/gh-1.webp);
+        }
+        &_2 {
+          background-image: url(../../images/catalog/banners/graduate-hotel/gh-2.webp);
+        }
+      }
+    }
+  }
+}

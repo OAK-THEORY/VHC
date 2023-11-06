@@ -1,6 +1,7 @@
 import './index.scss';
 import { bowlingTeam } from '../data/bowlingTeam.js';
 import { nobleFamily } from '../data/nobleFamily.js';
+import { graduateHotel } from '../data/graduateHotel.js';
 import { Component } from '../components/Component.js';
 import { Navigation } from '../components/Navigation';
 import { initCatalogSlider, initBannerSlider } from '../components/Swiper';
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     catalog('#bowling-team', bowlingTeam);
     catalog('#noble-family', nobleFamily);
+    catalog('#graduate-hotel', graduateHotel);
    
     // const cardListBowlingTeam = new Section({
     //     renderer: (item) => {
