@@ -18,7 +18,9 @@
     border: 1px solid $very-light-gray;
     background-color: $product-bg;
     padding: 15px 30px;
+    height: 100%;
 
+    @extend .flex-align-center;
     @include not-mobile {
       margin-bottom: 40px;
     }
@@ -33,7 +35,7 @@
     margin: 0 auto;
     display: block;
     
-    @include box(100%);
+    @include box(100%, auto);
     @include not-mobile {
       max-width: 244px;
     }
