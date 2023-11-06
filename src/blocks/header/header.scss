@@ -33,6 +33,8 @@
     @include padding-y(35px, 26px);
     @include mobile-only {
       flex-direction: row-reverse;
+
+      @include padding-y(26px);
     }
   }
 }
