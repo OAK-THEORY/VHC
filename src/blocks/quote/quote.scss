@@ -1,43 +1,78 @@
 .quote {
   background-color: $catalog-bg;
-  &_v1 {
-    
-    @include padding-y(45px, 65px);
-    .quote__image-wrapper {
-    
-      @include desktop-only {
-        min-width: 400px;
-      
-        // @include box(400px, 290px);
-      }
-      @include tablet-only {
-        min-width: 300px;
-        // max-height: 290px;
-      }
-      @include mobile-only {
-        min-width: 220px;
-        // max-height: 165px;
-      }
-    }
-  }
-  
+
   &__wrapper {
-    justify-content: center;
-    
+    background-repeat: no-repeat;
+    background-size: auto;
 
-    @extend .container;
-    @extend .flex-align-center;
+    // @extend .flex-align-center;
     @include desktop-only {
-      column-gap: 100px;
+      max-width: 1020px;
+      width: 100%;
     }
+    
     @include tablet-only {
-      column-gap: 50px;
-
+      @include padding-x($offset-tablet);
     }
     @include mobile-only {
-      flex-direction: column-reverse;
-      align-items: baseline;
-      gap: 40px;
+      @include padding-x($offset-mobile);
+    }
+
+    .quote_v1 & {
+      background-image: url(../../images/quote-img-1.svg);
+
+      @include desktop-only {
+        background-position: center right;
+        width: calc(100% - $offset-desktop * 2);
+  
+        @include margin-x(auto);
+        @include padding-y(130px, 95px);
+      }
+      @include tablet-only {
+        background-position: 120% bottom;
+        
+        @include padding-y(90px, 150px);
+      }
+      
+      @include mobile-only {
+        background-position: 110% 80%;
+        background-size: 270px;
+        
+        @include padding-y(60px, 190px);
+      }
+      @include media-custom-max(500px) {
+        background-position: 160px 80%;
+        
+        @include padding-y(60px, 190px);
+      }
+    }
+    .quote_v2 & {
+      background-image: url(../../images/quote-img-2.svg);
+      
+
+      @include desktop-only {
+        background-position: -71px center;
+        max-width: 1080px;
+        width: calc(100% - 30px);
+        @include padding-y(130px);
+      }
+      @include tablet-only {
+        background-position: -31px 40px;
+
+        @include padding-y(300px, 50px);
+      }
+      
+      @include mobile-only {
+        background-position: -31px 40px;
+        background-size: 300px;
+
+        @include padding-y(200px, 50px);
+      }
+      @include media-custom-max(500px) {
+        // background-position: 160px 80%;
+        
+        // @include padding-y(60px, 280px);
+      }
     }
   }
 
@@ -46,6 +81,29 @@
     max-width: 538px;
 
     @extend .flex-column;
+
+    .quote_v1 & {
+      @include mobile-only {
+        // max-width: 90%;
+        max-width: 69%;
+      }
+      @include media-custom-max(500px) {
+        max-width: 320px;
+      }
+    }
+
+    .quote_v2 & {
+      @include desktop-only {
+        margin-left: auto;
+      }
+      @include mobile-only {
+        // max-width: 90%;
+        max-width: 69%;
+      }
+      @include media-custom-max(500px) {
+        max-width: 320px;
+      }
+    }
   }
 
   &__title {
