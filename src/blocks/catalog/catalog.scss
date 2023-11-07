@@ -1,11 +1,9 @@
 .catalog {
   &__banner {
     position:  relative;
-    // max-height: 683px;
     height: 100%;
     align-items: end;
     
-    // @extend .flex;
     @include not-mobile {
       min-height: 683px;
 
@@ -15,8 +13,23 @@
     }
 
     & .swiper {
+      height: 683px;
+
       @include mobile-only {
         max-height: 200px;
+      }
+
+      &-banner {
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        @include box(100%);
+        @include not-mobile {
+          background-position: center center;
+        }
+        @include mobile-only {
+          background-position: 50% 30%;
+        }
       }
     }
   }
@@ -27,7 +40,7 @@
     left: 0;
     z-index: 1;
     
-    @extend .flex-column;
+    @extend .fc;
     // @extend .container;
     @include not-mobile {
       bottom: 120px;
@@ -48,7 +61,7 @@
   }
 
   &__description {
-    @extend .m-0;
+    @extend .m0;
     @include font-params(16px, 400, 24px);
     @include mobile-only {
       @include font-params(10px, 400, 14px);
@@ -79,17 +92,14 @@
       }
 
       &-wrapper {
-        @extend .m-0;
-        @extend .p-0;
+        @extend .m0;
+        @extend .p0;
       } 
 
       &-slide {
         height: unset;
       }
       &-navigation {
-    
-        // @extend .container;
-        @extend .flex-row;
         @include desktop-only {
           transform: translateX(-20px);
         }
@@ -111,120 +121,34 @@
           gap: 10px;
         }
       }
-      &-button-prev {
-        background-color: $white;
-      }
-    
-      &-button-next {
-        background-color: $coffee;
-      } 
-    
-      &-button-prev,
-      &-button-next {
-        border-radius: 50px;
-        cursor: pointer;
-        border: none;
-        transition: opacity 0.2s ease;
-    
-        @extend .flex-center-center;
-        @extend .p-0;
-        @include not-mobile {
-          @include box(52px);
-        }
-        @include mobile-only {
-          @include box(34px);
-    
-          & svg {
-            @include box(8px, 10px);
-          }
-        }
-    
-        &:hover {
-          opacity: 0.8;
-        }
-      }
     }
   }
 }
 
-#bowling-team {
-  .catalog__banner {
-    .swiper {
-      height: 683px;
-
-      &-banner {
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        @include box(100%);
-        @include not-mobile {
-          background-position: center center;
-        }
-        @include mobile-only {
-          background-position: 50% 30%;
-        }
-        &_1 {
-          background-image: url(../../images/catalog/banners/bowling-team/bowling-team-2.webp);
-        }
-        &_2 {
-          background-image: url(../../images/catalog/banners/bowling-team/bowling-team-1.webp);
-        }
-      }
-    }
+#bowling-team .catalog__banner .swiper-banner {
+  &_1 {
+    background-image: url(../../images/catalog/banners/bowling-team/bowling-team-2.webp);
+  }
+  &_2 {
+    background-image: url(../../images/catalog/banners/bowling-team/bowling-team-1.webp);
   }
 }
 
 
-#noble-family {
-  .catalog__banner {
-    .swiper {
-      height: 683px;
-
-      &-banner {
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        @include box(100%);
-        @include not-mobile {
-          background-position: center center;
-        }
-        @include mobile-only {
-          background-position: 50% 30%;
-        }
-        &_1 {
-          background-image: url(../../images/catalog/banners/noble-family/nf-1.webp);
-        }
-        &_2 {
-          background-image: url(../../images/catalog/banners/noble-family/nf-2.webp);
-        }
-      }
-    }
+#noble-family .catalog__banner .swiper-banner {
+  &_1 {
+    background-image: url(../../images/catalog/banners/noble-family/nf-1.webp);
+  }
+  &_2 {
+    background-image: url(../../images/catalog/banners/noble-family/nf-2.webp);
   }
 }
 
-#graduate-hotel {
-  .catalog__banner {
-    .swiper {
-      height: 683px;
-
-      &-banner {
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        @include box(100%);
-        @include not-mobile {
-          background-position: center center;
-        }
-        @include mobile-only {
-          background-position: 50% 30%;
-        }
-        &_1 {
-          background-image: url(../../images/catalog/banners/graduate-hotel/gh-1.webp);
-        }
-        &_2 {
-          background-image: url(../../images/catalog/banners/graduate-hotel/gh-2.webp);
-        }
-      }
-    }
+#graduate-hotel .catalog__banner .swiper-banner {
+  &_1 {
+    background-image: url(../../images/catalog/banners/graduate-hotel/gh-1.webp);
+  }
+  &_2 {
+    background-image: url(../../images/catalog/banners/graduate-hotel/gh-2.webp);
   }
 }

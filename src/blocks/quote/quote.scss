@@ -80,7 +80,7 @@
     gap: 16px;
     max-width: 538px;
 
-    @extend .flex-column;
+    @extend .fc;
 
     .quote_v1 & {
       @include mobile-only {
@@ -110,7 +110,7 @@
     color: $black;
     margin-left: 10px;
 
-    @extend .m-0;
+    @extend .m0;
     @include not-mobile {
       @include font-params(26px, 400);
     }

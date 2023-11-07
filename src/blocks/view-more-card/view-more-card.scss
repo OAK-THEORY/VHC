@@ -6,7 +6,7 @@
   box-sizing: border-box;
   gap: 30px;
 
-  @extend .flex-column;
+  @extend .fc;
   @include not-mobile {
     padding: 30px 30px 54px 30px;
   }

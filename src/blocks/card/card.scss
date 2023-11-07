@@ -5,7 +5,7 @@
   height: 100%;
   box-sizing: border-box;
 
-  @extend .flex-column;
+  @extend .fc;
   @include not-mobile {
     padding: 30px 30px 54px 30px;
   }
@@ -47,7 +47,7 @@
   &__info {
     gap: 8px;
 
-    @extend .flex-column;
+    @extend .fc;
     @include not-mobile {
       margin-bottom: 30px;
     }
@@ -60,7 +60,7 @@
     color: $near-black;
     font-family: 'Inter';
     
-    @extend .m-0;
+    @extend .m0;
     @include not-mobile {
       @include font-params(16px, 700, 19px);
     }

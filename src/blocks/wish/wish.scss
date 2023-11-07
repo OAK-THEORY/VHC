@@ -19,7 +19,7 @@
   &__info {
     align-items: baseline;
 
-    @extend .flex-column;
+    @extend .fc;
     @include not-mobile {
       max-width: 320px;
     }
@@ -91,7 +91,7 @@
     color: $black;
     margin-bottom: 14px;
 
-    @extend .m-0;
+    @extend .m0;
     @include not-mobile {
       @include font-params(24px, 400);
     }
@@ -106,7 +106,7 @@
     margin-bottom: 30px;
     color: $text;
 
-    @extend .m-0;
+    @extend .m0;
     @include not-mobile {
       @include font-params(14px, 400, 22px);
     }

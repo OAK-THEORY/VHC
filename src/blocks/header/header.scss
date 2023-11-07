@@ -1,5 +1,5 @@
 .header {
-  @extend .flex-column;
+  @extend .fc;
   @include not-mobile {
     padding-top: 48px;
   }
@@ -20,7 +20,7 @@
 
   &__info {
     @extend .uppercase;
-    @extend .m-0;
+    @extend .m0;
     @include font-params(14px, null, 22px);
 
     &-bolder {

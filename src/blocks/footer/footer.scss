@@ -4,7 +4,7 @@
   flex: 1 1 auto; // do not remove
   background-color: $black;
   &__copyright{
-    @extend .m-0;
+    @extend .m0;
     
     color: $white;
     font-size: 14px;

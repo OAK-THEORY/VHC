@@ -3,7 +3,7 @@
   
   &__button {
     @extend .flex-align-center;
-    @extend .p-0;
+    @extend .p0;
   
     background: unset;
     cursor: pointer;
@@ -50,7 +50,7 @@
 
   &__list {
     @extend .reset-list;
-    @extend .flex-column;
+    @extend .fc;
 
     gap: 16px;
     opacity: 0;
