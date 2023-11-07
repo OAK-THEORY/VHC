@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css'; 
-// import 'swiper/css/navigation';
+
 
 export const initCatalogSlider = () => {
     document.querySelectorAll('.catalog__swiper').forEach((module) => {
@@ -80,4 +80,49 @@ export const initBannerSlider = () => {
         });
     });
 }
+
+export const initGiftSlider = () => {
+    document.querySelectorAll('.gift__swiper').forEach((module) => {
+      const sliderContainer = module.querySelector('.swiper');
+      const nextButton = module.querySelector('.swiper-button-next');
+      const prevButton = module.querySelector('.swiper-button-prev');
+    
+      new Swiper(sliderContainer, {
+          modules: [Navigation],
+          centeredSlides: false,
+          slidesPerView: '3',
+          spaceBetween: 20,
+          watchOverflow: true,
+          cssWidthAndHeight: false,
+          allowTouchMove: true,
+          speed: 400,
+          loop: true,
+          setWrapperSize: false,
+          navigation: {
+              enabled: true,
+              nextEl: nextButton,
+              prevEl: prevButton,
+          },
+          breakpoints: {
+                // 1730: {
+                //     slidesPerView: 4.5,
+                // },
+                1025: {
+                    slidesPerView: 3,
+                },
+                767: {
+                    slidesPerView: 2,
+                    // spaceBetween: 20,
+                },
+                550: {
+                    slidesPerView: 2,
+                },
+                320: {
+                    slidesPerView: 1,
+                    // spaceBetween: 20,
+                },
+          },
+      });
+  });
+};
 
