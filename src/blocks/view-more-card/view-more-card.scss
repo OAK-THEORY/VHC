@@ -29,23 +29,4 @@
 
     @include box(100%);
   }
-
-  &__link {
-    color: $black;
-    transition: opacity 0.2s ease;
-
-    @extend .card__link;
-    
-    & svg path {
-      fill: $black;
-    }
-    &:hover {
-      color: $black;
-      opacity: 0.7;
-
-      & svg path {
-        fill: $black;
-      }
-    }
-  }
 }

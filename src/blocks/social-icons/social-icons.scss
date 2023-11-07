@@ -13,9 +13,5 @@
   &__link {
     @include box(12px, 12px);
     @extend .flex;
-
-    &_white-icon svg path {
-      fill: $white;
-    }
   }
 }

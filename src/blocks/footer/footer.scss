@@ -4,10 +4,12 @@
   flex: 1 1 auto; // do not remove
   background-color: $black;
   &__copyright{
-    @extend .m0;
-    
     color: $white;
-    font-size: 14px;
-    line-height: 21px;
+    
+    @extend .m0;
+    @include font-params(14px, 400, 21px);
+    @include mobile-only {
+      max-width: 215px;
+    };
   }
 }

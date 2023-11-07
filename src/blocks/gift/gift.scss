@@ -1,7 +1,7 @@
 .gift {
   position: relative;
   background-color: $catalog-bg;
-  overflow-y: hidden;
+  overflow-x: hidden;
   
   &::before,
   &::after {

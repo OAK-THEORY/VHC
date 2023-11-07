@@ -77,7 +77,18 @@
     backdrop-filter: blur(10px);
     cursor: pointer;
 
-    @include box(96px);
+    
+    @extend .p0;
+    @include not-mobile {
+      @include box(96px);
+    };
+    @include mobile-only {
+      & svg {
+        @include box(38px);
+      }
+      @include box(76px);
+    };
+    
     @extend .flex-center-center;
     & svg {
       transition: transform 0.2s ease;
