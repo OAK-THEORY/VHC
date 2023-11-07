@@ -1,5 +1,4 @@
 .hero {
-  min-height: 542px;
   background-image: url(../../images/hero-bg.webp);
   background-repeat: no-repeat;
   background-position: center center;
@@ -9,9 +8,11 @@
 
   @extend .flex-center-center;
   @include not-mobile {
+    min-height: 542px;
     gap: 20px;
   }
   @include mobile-only {
+    min-height: 384px;
     gap: 10px;
   }
   &__img {
@@ -27,16 +28,17 @@
   }
 
   &__title {
+    text-align: center;
+
+    @extend .uppercase;
     @include desktop-only {
-      @include font-params(170px, 400, 160px, -2.206px);
+      @include font-params(62px, 400);
     }
     @include tablet-only {
-      @include font-params(100px, 400, 90px, -1.5px);
+      @include font-params(62px, 400);
     }
     @include mobile-only {
-      font-size: calc(40px + 6vw);
-
-      @include font-params(null , 400, 90px, -0.798px);
+      @include font-params(24px, 400);
     }
   }
   &__subtitle {

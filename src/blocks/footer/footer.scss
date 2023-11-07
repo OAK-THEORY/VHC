@@ -1,15 +1,36 @@
 .footer {
-  @include padding-y(30px);
-
   flex: 1 1 auto; // do not remove
   background-color: $black;
-  &__copyright{
+
+  @include padding-y(30px);
+  
+  &__wrapper {
+    @extend .flex-row-center-space-between;
+    @extend .container;
+    @include mobile-only {
+      flex-direction: column;
+      align-items: baseline;
+      gap: 20px;
+    };
+  }
+
+  &__made-by,
+  &__copyright,
+  &__made-by-link {
     color: $white;
     
     @extend .m0;
     @include font-params(14px, 400, 21px);
-    @include mobile-only {
-      max-width: 215px;
-    };
+  }
+
+  &__made-by {
+    &-link {
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $gold;
+      }
+    }
   }
 }

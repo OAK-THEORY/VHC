@@ -1,6 +1,9 @@
 import Swiper from 'swiper';
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
+// Swiper.use([Navigation, Autoplay, EffectFade]);
 import 'swiper/css'; 
+
+
 
 
 export const initCatalogSlider = () => {
@@ -68,7 +71,8 @@ export const initBannerSlider = () => {
   
         new Swiper(sliderContainer, {
         
-            modules: [Autoplay],
+            modules: [Autoplay, EffectFade],
+            effect: "fade",
             centeredSlides: true,
             speed: 2000,            
             allowTouchMove: false,

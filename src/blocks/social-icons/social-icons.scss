@@ -11,7 +11,7 @@
   }
 
   &__link {
-    @include box(12px, 12px);
+    @include box(20px);
     @extend .flex;
   }
 }
