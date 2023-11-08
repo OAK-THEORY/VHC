@@ -1,12 +1,11 @@
 .catalog {
   &__banner {
-    position:  relative;
+    position: relative;
     height: 100%;
     align-items: end;
-    
+
     @include not-mobile {
       min-height: 683px;
-
     }
     @include mobile-only {
       max-height: 200px;
@@ -22,7 +21,7 @@
       &-banner {
         background-repeat: no-repeat;
         background-size: cover;
-        
+
         @include box(100%);
         @include not-mobile {
           background-position: center center;
@@ -39,7 +38,7 @@
     width: 100%;
     left: 0;
     z-index: 1;
-    
+
     @extend .fc;
     // @extend .container;
     @include not-mobile {
@@ -79,10 +78,10 @@
     @include mobile-only {
       padding-top: 24px;
     }
-    
+
     & .swiper {
       margin-right: unset;
-    
+
       @include not-mobile {
         display: flex;
         flex-direction: column-reverse;
@@ -90,11 +89,6 @@
         align-items: flex-end;
         margin-top: -160px;
       }
-
-      &-wrapper {
-        @extend .m0;
-        @extend .p0;
-      } 
 
       &-slide {
         height: unset;
@@ -106,7 +100,7 @@
         @include not-mobile {
           gap: 20px;
           justify-content: flex-end;
-          
+
           @include margin-x(auto);
           @include not-mobile {
             max-width: 1280px;
@@ -133,7 +127,6 @@
     background-image: url(../../images/catalog/banners/bowling-team/bowling-team-1.webp);
   }
 }
-
 
 #noble-family .catalog__banner .swiper-banner {
   &_1 {

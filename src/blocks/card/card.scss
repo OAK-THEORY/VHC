@@ -4,7 +4,9 @@
   border: 1px solid $very-light-gray;
   height: 100%;
   box-sizing: border-box;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.05);
 
+  @include margin-x(2px);
   @extend .fc;
   @include not-mobile {
     padding: 30px 30px 54px 30px;
@@ -32,7 +34,7 @@
   &__img {
     margin: 0 auto;
     display: block;
-    
+
     @include box(100%, auto);
     @include not-mobile {
       max-width: 244px;
@@ -56,8 +58,8 @@
 
   &__title {
     color: $near-black;
-    font-family: 'Inter';
-    
+    font-family: "Inter";
+
     @extend .m0;
     @include not-mobile {
       @include font-params(16px, 700, 19px);
@@ -70,7 +72,6 @@
   &__subtitle {
     color: $coffee;
 
-    
     @extend .uppercase;
     @include not-mobile {
       @include font-params(12px, 700, 19px);
@@ -98,16 +99,14 @@
 
   //   & svg path {
   //     transition: fill 0.2s ease;
-  //   } 
-  
+  //   }
+
   //   &:hover {
   //     color: $dark-gold;
-  
+
   //     & svg path {
   //       fill: $dark-gold;
   //     }
   //   }
   // }
 }
-
-

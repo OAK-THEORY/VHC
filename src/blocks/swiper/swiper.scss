@@ -1,7 +1,9 @@
 .swiper {
   &-wrapper {
+    padding-bottom: 5px;
+    padding-left: 0;
     @extend .m0;
-    @extend .p0;
+    // @extend .p0;
   }
   &-navigation {
     @extend .fr;
@@ -12,7 +14,7 @@
 
   &-button-next {
     background-color: $coffee;
-  } 
+  }
 
   &-button-prev,
   &-button-next {
