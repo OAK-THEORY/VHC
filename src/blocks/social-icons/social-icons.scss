@@ -2,7 +2,7 @@
   @extend .reset-list;
   @extend .fr;
 
-  gap: 20px;
+  gap: 10px;
 
   &_mobile-hidden {
     @include mobile-only {
@@ -10,8 +10,41 @@
     }
   }
 
-  &__link {
+  &_header &__link {
+    gap: 8px;
+    
     @include box(20px);
-    @extend .flex;
   }
+
+  &__link {
+    @include box(28px);
+    @extend .flex;
+
+    path {
+      transition: fill 0.2s ease, stroke 0.2s ease;
+    }
+
+    &-icon-x path:first-of-type {
+      fill: $near-black;
+    }
+
+    &-icon-x path:last-of-type {
+      fill: transparent;
+      stroke: $near-black;
+    }
+
+    &-icon path {
+      fill: $near-black;
+    }
+    &:hover &-icon-x path:first-of-type{
+      fill: $gold;
+    }
+    &:hover &-icon-x path:last-of-type{
+      stroke: $gold;
+    }
+
+    &:hover &-icon path {
+      fill: $gold;
+    }
+  } 
 }
