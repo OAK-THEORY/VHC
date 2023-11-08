@@ -19,41 +19,39 @@
     @include box(100%, auto);
   }
 
-  &__title,
-  &__subtitle {
-    display: block;
-    color: $white;
-
-    @extend .m0;
-  }
-
   &__title {
-    text-align: center;
-
-    @extend .uppercase;
-    @include desktop-only {
-      @include font-params(62px, 400);
-    }
-    @include tablet-only {
-      @include font-params(62px, 400);
-    }
-    @include mobile-only {
-      @include font-params(24px, 400);
+    display: none;
+    &-icon {
+      @include desktop-only {
+        width: 785px;
+      }
+      @include tablet-only {
+        width: 585px;
+      }
+      @include mobile-only {
+        width: 305px;
+      }
     }
   }
   &__subtitle {
     color: $gray-50;
-    
-    
+    display: block;
+    text-align: center;
+
+    @extend .m0;
+    @extend .uppercase;
     @include desktop-only {
-      @include font-params(24px, 700, null, 6.84px);
+      padding-left: 60px;
+      @include font-params(36px, 400, null, 11px);
     }
     @include tablet-only {
-      @include font-params(16px, 700, null, 5px);
+      padding-left: 40px;
+
+      @include font-params(24px, 400, null, 7px);
     }
     @include mobile-only {
-      @include font-params(14px, 700, null, 4px);
+      max-width: 240px;
+      @include font-params(18px, 400, null, 5px);
     }
-    @extend .uppercase;
   }
 }
