@@ -6,33 +6,35 @@
     justify-content: space-between;
     align-items: center;
     gap: 80px;
-    
+
     @include padding-y(84px);
   }
   @include not-desktop {
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 50px;
 
     @include padding-y(62px);
   }
-  
+
   &__info {
     align-items: baseline;
+    background-image: url(../../images/branch.svg);
+    background-repeat: no-repeat;
+    padding-top: 60px;
 
     @extend .fc;
     @include not-mobile {
       max-width: 320px;
     }
-
-    @include mobile-only {
-      max-width: 290px;
+    @include tablet-only {
+      max-width: 500px;
     }
   }
 
   &__video-wrapper {
     @include desktop-only {
       @include box(100%);
-      
+
       max-width: 893px;
     }
     position: relative;
@@ -77,18 +79,17 @@
     backdrop-filter: blur(10px);
     cursor: pointer;
 
-    
     @extend .p0;
     @include not-mobile {
       @include box(96px);
-    };
+    }
     @include mobile-only {
       & svg {
         @include box(38px);
       }
       @include box(76px);
-    };
-    
+    }
+
     @extend .flex-center-center;
     & svg {
       transition: transform 0.2s ease;
@@ -108,7 +109,6 @@
     }
 
     @include mobile-only {
-
       @include font-params(22px, 400);
     }
   }
