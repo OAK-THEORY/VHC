@@ -95,7 +95,7 @@ export const initGiftSlider = () => {
           modules: [Navigation],
           centeredSlides: false,
           slidesPerView: '3',
-          spaceBetween: 20,
+          spaceBetween: 10,
           watchOverflow: true,
           cssWidthAndHeight: false,
           allowTouchMove: true,
@@ -108,23 +108,18 @@ export const initGiftSlider = () => {
               prevEl: prevButton,
           },
           breakpoints: {
-                // 1730: {
-                //     slidesPerView: 4.5,
-                // },
-                1025: {
-                    slidesPerView: 3,
-                },
-                767: {
-                    slidesPerView: 2,
-                    // spaceBetween: 20,
-                },
-                550: {
-                    slidesPerView: 2,
-                },
-                320: {
-                    slidesPerView: 1,
-                    // spaceBetween: 20,
-                },
+            1025: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            550: {
+                slidesPerView: 2,
+            },
+            320: {
+                slidesPerView: 1,
+            },
           },
       });
   });
