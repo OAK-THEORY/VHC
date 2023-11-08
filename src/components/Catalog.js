@@ -6,10 +6,10 @@ export const catalog = (id, data) => {
     const card = new Card(data, '#slide-card-template');
     return card.generateCard();
   }
-  
+
   const cardList = new Section({
     renderer: (item) => {
-        cardList.setItem(createNewCard(item));
+      cardList.setItem(createNewCard(item));
     },
   }, `${id} .catalog__swiper .swiper-wrapper`);
   cardList.renderItems(data);

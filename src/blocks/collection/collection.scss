@@ -7,10 +7,10 @@
   @include margin-x(5px);
   @include not-mobile {
     padding: 30px 30px 53px 30px;
-  };
+  }
   @include mobile-only {
     padding: 10px 10px 35px 10px;
-  };
+  }
 
   &__img-wrapper {
     @include box(100%);
@@ -24,9 +24,9 @@
   &__link {
     @include not-mobile {
       margin-top: 35px;
-    };
+    }
     @include mobile-only {
       margin-top: 25px;
-    };
+    }
   }
 }
