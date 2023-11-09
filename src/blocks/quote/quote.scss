@@ -5,12 +5,11 @@
     background-repeat: no-repeat;
     background-size: auto;
 
-    // @extend .flex-align-center;
     @include desktop-only {
       max-width: 1020px;
       width: 100%;
     }
-    
+
     @include tablet-only {
       @include padding-x($offset-tablet);
     }
@@ -24,31 +23,30 @@
       @include desktop-only {
         background-position: center right;
         width: calc(100% - $offset-desktop * 2);
-  
+
         @include margin-x(auto);
         @include padding-y(130px, 95px);
       }
       @include tablet-only {
         background-position: 120% bottom;
-        
+
         @include padding-y(90px, 150px);
       }
-      
+
       @include mobile-only {
         background-position: 110% 80%;
         background-size: 270px;
-        
+
         @include padding-y(60px, 190px);
       }
       @include media-custom-max(500px) {
         background-position: 160px 80%;
-        
+
         @include padding-y(60px, 190px);
       }
     }
     .quote_v2 & {
       background-image: url(../../images/quote-img-2.svg);
-      
 
       @include desktop-only {
         background-position: -71px center;
@@ -61,17 +59,12 @@
 
         @include padding-y(300px, 50px);
       }
-      
+
       @include mobile-only {
         background-position: -31px 40px;
         background-size: 300px;
 
         @include padding-y(200px, 50px);
-      }
-      @include media-custom-max(500px) {
-        // background-position: 160px 80%;
-        
-        // @include padding-y(60px, 280px);
       }
     }
   }
@@ -84,7 +77,6 @@
 
     .quote_v1 & {
       @include mobile-only {
-        // max-width: 90%;
         max-width: 69%;
       }
       @include media-custom-max(500px) {
@@ -97,7 +89,6 @@
         margin-left: auto;
       }
       @include mobile-only {
-        // max-width: 90%;
         max-width: 69%;
       }
       @include media-custom-max(500px) {
@@ -135,11 +126,9 @@
 
     &-name {
       color: $coffee;
-  
+
       @extend .uppercase;
       @include font-params(12px, 700, 19px, 2px);
-      
-      
     }
     &-img {
       @include not-mobile {
@@ -149,25 +138,5 @@
         @include box(36px);
       }
     }
-  }
-  &__image-wrapper {
-    
-    @include desktop-only {
-      min-width: 400px;
-    
-      // @include box(400px, 290px);
-    }
-    @include tablet-only {
-      min-width: 300px;
-      // max-height: 290px;
-    }
-    @include mobile-only {
-      min-width: 220px;
-      // max-height: 165px;
-    }
-  }
-
-  &__image {
-    @include box(100%, auto);
   }
 }

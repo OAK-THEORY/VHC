@@ -1,13 +1,13 @@
 .root {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 
-    @include media-custom-min(calc($breakpoint-desktop-large + 1px)) {
-        max-width: $breakpoint-desktop-large;
-        border-left: 1px solid $light-gold;
-        border-right: 1px solid $light-gold;
+  @include media-custom-min(calc($breakpoint-desktop-large + 1px)) {
+    max-width: $breakpoint-desktop-large;
+    border-left: 1px solid $light-gold;
+    border-right: 1px solid $light-gold;
 
-        @include margin-x(auto);
-    }
+    @include margin-x(auto);
+  }
 }

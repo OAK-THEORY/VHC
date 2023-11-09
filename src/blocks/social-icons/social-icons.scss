@@ -12,7 +12,7 @@
 
   &_header &__link {
     gap: 8px;
-    
+
     @include box(20px);
   }
 
@@ -36,15 +36,15 @@
     &-icon path {
       fill: $near-black;
     }
-    &:hover &-icon-x path:first-of-type{
+    &:hover &-icon-x path:first-of-type {
       fill: $gold;
     }
-    &:hover &-icon-x path:last-of-type{
+    &:hover &-icon-x path:last-of-type {
       stroke: $gold;
     }
 
     &:hover &-icon path {
       fill: $gold;
     }
-  } 
+  }
 }

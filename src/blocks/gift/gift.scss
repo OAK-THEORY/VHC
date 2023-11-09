@@ -2,7 +2,7 @@
   position: relative;
   background-color: $catalog-bg;
   overflow-x: hidden;
-  
+
   &::before,
   &::after {
     position: absolute;
@@ -16,21 +16,19 @@
       top: 40px;
 
       @include box(250px, 300px);
-    };  
+    }
     @include mobile-only {
       top: 80px;
 
       @include box(30%);
-    };
+    }
   }
 
   &::before {
-    // top: 0;
     left: -40px;
     background-image: url(../../images/gift-1.svg);
   }
   &::after {
-    // top: 0;
     right: -40px;
     background-image: url(../../images/gift-2.svg);
   }
@@ -40,12 +38,10 @@
   }
   @include mobile-only {
     @include padding-y(60px, 80px);
-
   }
 
   &__container {
     @extend .container;
-    
   }
   &__info {
     margin-bottom: 40px;
@@ -59,35 +55,35 @@
     @extend .m0;
     @include mobile-only {
       @include font-params(22, 400);
-    };
+    }
     @include not-mobile {
       @include font-params(32px, 400);
-    };  
+    }
   }
 
   &__description {
     color: $text;
     text-align: center;
-    
+
     @extend .m0;
     @include not-mobile {
       @include font-params(16px, 400, 24px);
-    };
+    }
     @include mobile-only {
       max-width: 250px;
-      
+
       @include font-params(14px, 400, 22px);
-    };
+    }
   }
 
   &__swiper .swiper {
     @extend .fc;
     @include not-mobile {
       gap: 40px;
-    };
+    }
     @include mobile-only {
       gap: 20px;
-    };
+    }
 
     &-navigation {
       width: 100%;
@@ -96,10 +92,10 @@
       @include mobile-only {
         justify-content: flex-start;
         gap: 10px;
-      };
+      }
       @include not-mobile {
         gap: 20px;
-      };
+      }
     }
   }
 }

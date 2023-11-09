@@ -1,24 +1,24 @@
 .navigation {
   position: relative;
-  
+
   &__button {
     @extend .flex-align-center;
     @extend .p0;
-  
+
     background: unset;
     cursor: pointer;
     border: none;
-    
+
     @include not-mobile {
       gap: 8px;
-   
+
       &-icon {
         transition: rotate 0.2s ease;
       }
       &::before {
         @include font-params(16px, 500);
 
-        content: 'Collection';
+        content: "Collection";
       }
 
       &_active &-icon {
@@ -41,9 +41,9 @@
           transform: rotate(-135deg);
         }
       }
-      
+
       &-icon {
-       display: none; 
+        display: none;
       }
     }
   }
@@ -101,8 +101,8 @@
   position: relative;
   z-index: -1;
   transform: rotate(0deg);
-  transition: .5s ease-in-out;
-  
+  transition: 0.5s ease-in-out;
+
   &__item {
     display: block;
     position: absolute;
@@ -113,7 +113,7 @@
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
 
     &:nth-child(1) {
       top: 0px;
