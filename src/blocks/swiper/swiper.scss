@@ -23,7 +23,7 @@
     border: none;
     transition: opacity 0.2s ease;
 
-    @extend .flex-center-center;
+    @extend .fcc;
     @extend .p0;
     @include not-mobile {
       @include box(52px);

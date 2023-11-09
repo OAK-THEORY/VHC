@@ -64,7 +64,7 @@
     z-index: 2;
 
     @include box(100%);
-    @extend .flex-center-center;
+    @extend .fcc;
 
     &.hidden {
       opacity: 0;
@@ -90,12 +90,34 @@
       @include box(76px);
     }
 
-    @extend .flex-center-center;
+    @extend .fcc;
     & svg {
       transition: transform 0.2s ease;
     }
     &:hover svg {
       transform: scale(1.1);
+    }
+
+    &-message {
+      display: none;
+      color: $white;
+
+      @include font-params(16px, 400);
+    }
+
+    &.show-message {
+      cursor: initial;
+
+      @include padding-x(20px);
+      @include box(unset);
+
+      .wish__play-button-message {
+        display: block;
+      }
+
+      .wish__play-button-icon {
+        display: none;
+      }
     }
   }
 

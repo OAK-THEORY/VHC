@@ -5,7 +5,7 @@
   background-size: cover;
   flex-direction: column;
 
-  @extend .flex-center-center;
+  @extend .fcc;
   @include not-mobile {
     min-height: 542px;
     gap: 20px;
