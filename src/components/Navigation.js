@@ -23,5 +23,5 @@ export const Navigation = () => {
     if (![...e.target.classList].some(i => i.includes(mainClass))) removeActiveClass();
   });
 
-  console.log(navigation, list, button);
+  // console.log(navigation, list, button);
 }
