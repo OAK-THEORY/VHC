@@ -70,7 +70,7 @@ export const initGiftSlider = () => {
             modules: [Navigation],
             centeredSlides: false,
             slidesPerView: '3',
-            spaceBetween: 20,
+            spaceBetween: 10,
             watchOverflow: true,
             cssWidthAndHeight: false,
             allowTouchMove: true,

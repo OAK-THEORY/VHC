@@ -40,6 +40,11 @@
   &__container {
     @extend .container;
   }
+  &__swiper {
+    @include mobile-only {
+      @include padding-x(12px);
+    }
+  }
   &__info {
     margin-bottom: 40px;
 
