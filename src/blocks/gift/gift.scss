@@ -11,15 +11,12 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
+    top: 40px;
 
     @include not-mobile {
-      top: 40px;
-
       @include box(250px, 300px);
     }
     @include mobile-only {
-      top: 80px;
-
       @include box(30%);
     }
   }

@@ -49,11 +49,11 @@ export const initBannerSlider = () => {
             modules: [Autoplay, EffectFade],
             effect: "fade",
             centeredSlides: true,
-            speed: 2000,
+            speed: 1500,
             allowTouchMove: false,
             loop: true,
             autoplay: {
-                delay: 3500,
+                delay: 1000,
                 disableOnInteraction: false,
             }
         });
@@ -70,7 +70,7 @@ export const initGiftSlider = () => {
             modules: [Navigation],
             centeredSlides: false,
             slidesPerView: '3',
-            spaceBetween: 10,
+            spaceBetween: 20,
             watchOverflow: true,
             cssWidthAndHeight: false,
             allowTouchMove: true,

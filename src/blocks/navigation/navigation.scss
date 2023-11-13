@@ -18,7 +18,7 @@
       &::before {
         @include font-params(16px, 500);
 
-        content: "Collection";
+        content: "Shop the Collections";
       }
 
       &_active &-icon {

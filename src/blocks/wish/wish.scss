@@ -20,14 +20,18 @@
     align-items: baseline;
     background-image: url(../../images/branch.svg);
     background-repeat: no-repeat;
-    padding-top: 60px;
 
     @extend .fc;
     @include not-mobile {
       max-width: 320px;
+      padding-top: 60px;
     }
     @include tablet-only {
       max-width: 500px;
+    }
+    @include mobile-only {
+      padding-top: 50px;
+      background-size: 75px;
     }
   }
 
