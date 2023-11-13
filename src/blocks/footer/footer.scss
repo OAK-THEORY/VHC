@@ -3,7 +3,7 @@
   background-color: $black;
 
   @include padding-y(30px);
-  
+
   &__wrapper {
     @extend .flex-row-center-space-between;
     @extend .container;
@@ -11,14 +11,14 @@
       flex-direction: column;
       align-items: baseline;
       gap: 20px;
-    };
+    }
   }
 
   &__made-by,
   &__copyright,
   &__made-by-link {
     color: $white;
-    
+
     @extend .m0;
     @include font-params(14px, 400, 21px);
   }

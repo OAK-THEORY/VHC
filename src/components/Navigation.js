@@ -6,6 +6,7 @@ export const Navigation = () => {
 
   const button = navigation.querySelector(`.${mainClass}__button`);
   const list = navigation.querySelector(`.${mainClass}__list`);
+  const links = navigation.querySelectorAll(`.${mainClass}__link`);
 
   function removeActiveClass() {
     button.classList.remove(button.classList[0] + activeClass);
@@ -23,5 +24,7 @@ export const Navigation = () => {
     if (![...e.target.classList].some(i => i.includes(mainClass))) removeActiveClass();
   });
 
-  // console.log(navigation, list, button);
+  links.forEach((link) => {
+    link.addEventListener('click', removeActiveClass);
+  })
 }

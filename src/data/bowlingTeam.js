@@ -62,5 +62,5 @@ export const bowlingTeam = [
     title: "Vanderbilt University Women's Commodores Crewneck",
     subtitle: "Gear",
     link: "https://www.bkstr.com/vanderbiltstore/product/w-relax-cree-3c-ss-black-sm---946351-1"
-  }    
+  }
 ];
