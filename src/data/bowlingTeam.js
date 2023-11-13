@@ -29,7 +29,7 @@ export const bowlingTeam = [
   },
   {
     imagePath: image6,
-    title: "Vanderbilt University 1/4 Zip Top",
+    title: "Vanderbilt University Women’s ¼ Zip Top",
     subtitle: "League",
     link: "https://www.bkstr.com/vanderbiltstore/product/wj-1-4zip-academy-oatht-sm---204607-1"
   },
@@ -47,20 +47,20 @@ export const bowlingTeam = [
   },
   {
     imagePath: image3,
-    title: "Vanderbilt University Crewneck",
+    title: "Vanderbilt University Men’s Crewneck",
     subtitle: "Nike",
     link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/men/sweatshirts-men/crew-club-1-2c-ssn-black-sm---438866-1"
   },
   {
     imagePath: image2,
-    title: "Vanderbilt University Cropped Hoodie",
+    title: "Vanderbilt University Women’s Cropped Hoodie",
     subtitle: "Uscape",
     link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/wj-crop-hoodie-fsn-black-xs---725037-1"
   },
   {
     imagePath: image1,
     title: "Vanderbilt University Women's Commodores Crewneck",
-    subtitle: "Gear",
+    subtitle: "Gear for sports",
     link: "https://www.bkstr.com/vanderbiltstore/product/w-relax-cree-3c-ss-black-sm---946351-1"
   }
 ];

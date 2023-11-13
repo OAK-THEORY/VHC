@@ -18,7 +18,7 @@ export const nobleFamily = [
   },
   {
     imagePath: image8,
-    title: "Vanderbilt University Women's Cropped Short Sleeve T-Shirt",
+    title: "Vanderbilt University Men’s Long Sleeve T-Shirt",
     subtitle: "47 Brand",
     link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/t-shirts-tanks-women/w-stevie-crop-sst-black-sm---430467-1"
   },
@@ -36,7 +36,7 @@ export const nobleFamily = [
   },
   {
     imagePath: image10,
-    title: "Vanderbilt University Commodores Short Sleeve T-Shirt",
+    title: "Vanderbilt University Men’s Commodores Short Sleeve T-Shirt",
     subtitle: "League",
     link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/men/t-shirts-tanks-men/alamerte-wmk-fsn-m-vegas-sm---992988-1"
   },
@@ -61,12 +61,12 @@ export const nobleFamily = [
   {
     imagePath: image2,
     title: "Vanderbilt University Women's Commodores Tunic",
-    subtitle: "Champion",
+    subtitle: "Emerson street",
     link: "https://www.bkstr.com/vanderbiltstore/product/w-maldives-tunic-m-black-sm---174977-1"
   },
   {
     imagePath: image1,
-    title: "Vanderbilt University 1/4 Zip",
+    title: "Vanderbilt University Men’s ¼ Zip",
     subtitle: "Peter Millar",
     link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/men/1-4-zip-crown-comf-lgrey-sm---735097-1"
   }
