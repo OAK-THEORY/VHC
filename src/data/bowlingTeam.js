@@ -15,12 +15,12 @@ export const bowlingTeam = [
     subtitle: "Chicka-d",
     link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/sweatshirts-women/w-warm-up-crew-swe-natur-1x---247962-1"
   },
-  {
-    imagePath: image8,
-    title: "Vanderbilt University Women's Pullover",
-    subtitle: "Gameday Couture",
-    link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/w-mockneck-pullove-scspc-xs---372835-1"
-  },
+  // {
+  //   imagePath: image8,
+  //   title: "Vanderbilt University Women's Pullover",
+  //   subtitle: "Gameday Couture",
+  //   link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/w-mockneck-pullove-scspc-xs---372835-1"
+  // },
   {
     imagePath: image7,
     title: "Vanderbilt University Women's Boxy Long Sleeve Tee",
