@@ -1,0 +1,40 @@
+name: Deploy Code to S3 Bucket
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v2
+        
+        # - name: Set up SSH
+        #   uses: webfactory/ssh-agent@v0.5.3
+        #   with:
+        #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        
+        - name: Set up AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v1
+          with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: us-east-1
+
+        - name: Run Make Init
+          run: make init
+        
+        - name: Run Make Test
+          run: make test
+        
+        # - name: Run Make build
+        #   run: make build
+
+        # - name: Run Make destroy
+        #   run: make destroy        
+        
+  
+            
