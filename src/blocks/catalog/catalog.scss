@@ -27,7 +27,8 @@
           background-position: center center;
         }
         @include mobile-only {
-          background-position: 50% 30%;
+          background-position: 50% 15%;
+          background-size: 130% auto;
         }
       }
     }
