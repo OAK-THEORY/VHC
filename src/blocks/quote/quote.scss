@@ -137,6 +137,7 @@
       @include font-params(12px, 700, 19px, 2px);
     }
     &-img {
+      border-radius: 50px;
       @include not-mobile {
         @include box(50px);
       }
