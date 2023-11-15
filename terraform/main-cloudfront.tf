@@ -4,13 +4,16 @@ locals {
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
-    # domain_name              = "${aws_s3_bucket.vhc_s3_bucket.bucket}.s3-website-${var.region}.amazonaws.com"
-    domain_name = "${aws_s3_bucket.vhc_s3_bucket.bucket_domain_name}"
+    domain_name              = "${aws_s3_bucket.vhc_s3_bucket.bucket}.s3-website-${var.region}.amazonaws.com"
+    # domain_name = "${aws_s3_bucket.vhc_s3_bucket.bucket_domain_name}"
     origin_id                = local.s3_origin_id
 
-    # s3_origin_config {
-    #   origin_access_identity = aws_cloudfront_origin_access_identity.oai.cloudfront_access_identity_path
-    # }
+    custom_origin_config {
+      http_port                = 80
+      https_port               = 443
+      origin_protocol_policy   = "http-only"  # or "match-viewer" based on your requirements
+      origin_ssl_protocols     = ["TLSv1.2"]
+    }
   }
 
   
