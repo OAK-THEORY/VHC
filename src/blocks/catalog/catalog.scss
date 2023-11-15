@@ -51,8 +51,6 @@
   }
 
   &__title {
-    text-transform: capitalize;
-
     @include font-params(48px, 400);
     @include margin-y(0, 8px);
     @include mobile-only {
