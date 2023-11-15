@@ -40,6 +40,17 @@ resource "aws_s3_bucket_website_configuration" "vhc_s3_bucket_website_configurat
 
 }
 
+
+resource "aws_s3_bucket_public_access_block" "vhc_s3_public_access_block" {
+  bucket = aws_s3_bucket.vhc_s3_bucket.id
+
+  block_public_acls   = false
+  block_public_policy = false
+  ignore_public_acls  = false
+  restrict_public_buckets = false
+}
+
+
 # S3 Bucket Policy
 resource "aws_s3_bucket_policy" "allow_public_access" {
   bucket = aws_s3_bucket.vhc_s3_bucket.id
