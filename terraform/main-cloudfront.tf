@@ -26,11 +26,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   comment             = "Some comment"
   default_root_object = "index.html"
 
-  logging_config {
-    include_cookies = false
-    bucket          = "vhc_s3_bucket.s3.amazonaws.com"
-    prefix          = "myprefix"
-  }
+#   logging_config {
+#     include_cookies = false
+#     bucket          = "vhc_s3_bucket.s3.amazonaws.com"
+#     prefix          = "myprefix"
+#   }
 
 #   aliases = ["mysite.example.com", "yoursite.example.com"]
 
