@@ -8,7 +8,7 @@ init:
 test:
 	cd terraform && terraform fmt
 	cd terraform && terraform validate
-	cd terraform && terraform plan -lock=false
+	cd terraform && terraform plan
 
 build:
 	cd terraform && terraform apply --auto-approve
