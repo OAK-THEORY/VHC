@@ -1,7 +1,7 @@
-resource "aws_s3_bucket_acl" "vhc_s3_bucket_acl" {
-  bucket = aws_s3_bucket.vhc_s3_bucket.id
-  acl    = "private"
-}
+# resource "aws_s3_bucket_acl" "vhc_s3_bucket_acl" {
+#   bucket = aws_s3_bucket.vhc_s3_bucket.id
+#   acl    = "private"
+# }
 
 locals {
   s3_origin_id = "myS3Origin"
