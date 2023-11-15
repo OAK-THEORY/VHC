@@ -30,8 +30,8 @@ jobs:
         - name: Run Make Test
           run: make test
         
-        # - name: Run Make build
-        #   run: make build
+        - name: Run Make build
+          run: make build
 
         # - name: Run Make destroy
         #   run: make destroy        
