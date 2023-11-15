@@ -27,15 +27,15 @@ resource "aws_s3_bucket" "vhc_s3_bucket" {
   }
 }
 
-resource "aws_s3_bucket_website_configuration" "vhc_s3_bucket_website_configuration" {
-  bucket = aws_s3_bucket.vhc_s3_bucket.id
+# resource "aws_s3_bucket_website_configuration" "vhc_s3_bucket_website_configuration" {
+#   bucket = aws_s3_bucket.vhc_s3_bucket.id
 
-  index_document {
-    suffix = "index.html"
-  }
+#   index_document {
+#     suffix = "index.html"
+#   }
 
-  error_document {
-    key = "error.html"
-  }
+#   error_document {
+#     key = "error.html"
+#   }
 
-}
+# }
