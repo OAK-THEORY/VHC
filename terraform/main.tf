@@ -39,3 +39,20 @@ resource "aws_s3_bucket_website_configuration" "vhc_s3_bucket_website_configurat
   }
 
 }
+
+# S3 Bucket Policy
+resource "aws_s3_bucket_policy" "allow_public_access" {
+  bucket = aws_s3_bucket.vhc_s3_bucket.id
+
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Action    = "s3:GetObject",
+        Effect    = "Allow",
+        Resource  = "arn:aws:s3:::${aws_s3_bucket.vhc_s3_bucket.bucket}/*",
+        Principal = "*"
+      },
+    ],
+  })
+}

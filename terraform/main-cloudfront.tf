@@ -7,9 +7,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     domain_name              = "${aws_s3_bucket.vhc_s3_bucket.bucket}.s3-website-${var.region}.amazonaws.com"
     origin_id                = local.s3_origin_id
 
-    s3_origin_config {
-      origin_access_identity = aws_cloudfront_origin_access_identity.oai.cloudfront_access_identity_path
-    }
+    # s3_origin_config {
+    #   origin_access_identity = aws_cloudfront_origin_access_identity.oai.cloudfront_access_identity_path
+    # }
   }
 
   
@@ -59,24 +59,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 }
 
-# CloudFront Origin Access Identity
-resource "aws_cloudfront_origin_access_identity" "oai" {
-  comment = "OAI for accessing private S3 content"
-}
+# # CloudFront Origin Access Identity
+# resource "aws_cloudfront_origin_access_identity" "oai" {
+#   comment = "OAI for accessing private S3 content"
+# }
 
-# S3 Bucket Policy
-resource "aws_s3_bucket_policy" "allow_oai_access" {
-  bucket = aws_s3_bucket.vhc_s3_bucket.id
 
-  policy = jsonencode({
-    Version = "2012-10-17",
-    Statement = [
-      {
-        Action    = "s3:GetObject",
-        Effect    = "Allow",
-        Resource  = "arn:aws:s3:::${aws_s3_bucket.vhc_s3_bucket.bucket}/*",
-        Principal = { AWS = "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity ${aws_cloudfront_origin_access_identity.oai.id}" }
-      },
-    ],
-  })
-}
