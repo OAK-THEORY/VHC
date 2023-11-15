@@ -4,8 +4,7 @@ locals {
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
-    domain_name = "vhc-s3-bucket.s3-website-us-east-1.amazonaws.com"
-    # domain_name              = "${aws_s3_bucket.vhc_s3_bucket.bucket}.s3-website-${var.region}.amazonaws.com"
+    domain_name              = "${aws_s3_bucket.vhc_s3_bucket.bucket}.s3-website-${var.region}.amazonaws.com"
     origin_id                = local.s3_origin_id
 
     s3_origin_config {
