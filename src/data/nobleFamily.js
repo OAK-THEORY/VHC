@@ -18,7 +18,7 @@ export const nobleFamily = [
   },
   {
     imagePath: image8,
-    title: "Vanderbilt University Men’s Long Sleeve T-Shirt",
+    title: "Vanderbilt University Women's Cropped Short Sleeve T-Shirt",
     subtitle: "47 Brand",
     link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/t-shirts-tanks-women/w-stevie-crop-sst-black-sm---430467-1"
   },
@@ -30,7 +30,7 @@ export const nobleFamily = [
   },
   {
     imagePath: image6,
-    title: "Vanderbilt University Long Sleeve T-Shirt",
+    title: "Vanderbilt University Men's Long Sleeve T-shirt",
     subtitle: "47 Brand",
     link: "https://www.bkstr.com/vanderbiltstore/product/lst-brex-cover-two-slate-sm---477573-1"
   },
