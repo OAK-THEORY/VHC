@@ -133,7 +133,6 @@
     &-name {
       color: $coffee;
 
-      @extend .uppercase;
       @include font-params(12px, 700, 19px, 2px);
     }
     &-img {
