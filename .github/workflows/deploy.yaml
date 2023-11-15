@@ -12,11 +12,6 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v2
         
-        # - name: Set up SSH
-        #   uses: webfactory/ssh-agent@v0.5.3
-        #   with:
-        #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        
         - name: Set up AWS Credentials
           uses: aws-actions/configure-aws-credentials@v1
           with:
@@ -42,7 +37,7 @@ jobs:
         
         - name: Deploy to S3
           run: |
-            aws s3 sync . s3://vhc-s3-bucket --exclude '.git/*' --exclude '.github/*' --exclude 'terraform/*' --exclude 'Makefile'
+            aws s3 sync . s3://vhc-s3-bucket --exclude '.git/*' --exclude '.github/*' --exclude 'terraform/*' --exclude 'Makefile' --delete
 
     
         
