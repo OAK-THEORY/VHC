@@ -25,7 +25,7 @@ export const initCatalogSlider = () => {
                 prevEl: prevButton,
             },
             breakpoints: {
-                1025: {
+                1024: {
                     slidesPerView: 3.5,
                 },
                 767: {
@@ -83,7 +83,7 @@ export const initGiftSlider = () => {
                 prevEl: prevButton,
             },
             breakpoints: {
-                1025: {
+                1024: {
                     slidesPerView: 3,
                 },
                 767: {

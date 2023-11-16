@@ -63,7 +63,7 @@
 
   &__img-wrapper {
     @include not-mobile {
-      max-width: 670px;
+      max-width: 580px;
     }
     @include mobile-only {
       width: 100%;

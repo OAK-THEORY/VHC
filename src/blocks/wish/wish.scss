@@ -2,7 +2,7 @@
   display: flex;
 
   @extend .container;
-  @include desktop-only {
+  @include not-mobile {
     justify-content: space-between;
     align-items: center;
     gap: 80px;
@@ -11,6 +11,7 @@
   }
   @include not-desktop {
     flex-direction: column;
+    align-items: baseline;
     row-gap: 50px;
 
     @include padding-y(62px);
@@ -36,9 +37,9 @@
   }
 
   &__video-wrapper {
-    @include desktop-only {
-      @include box(100%);
+    @include box(100%);
 
+    @include desktop-only {
       max-width: 893px;
     }
     position: relative;

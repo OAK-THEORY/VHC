@@ -1,26 +1,25 @@
 $white: #ffffff;
 $black: #000000;
 $black-opacity: rgba(0, 0, 0, 0.3);
-$black-50: #221F21;
-$near-black: #1C1C1C;
+$black-50: #221f21;
+$near-black: #1c1c1c;
 
-$gray-50: #EEEEEE;
+$gray-50: #eeeeee;
 
+$red-50: #fff5f5;
+$red-800: #531d1d;
 
-$red-50: #FFF5F5;
-$red-800: #531D1D;
+$orange-50: #fffaf0;
+$yellow-50: #fffff0;
 
-$orange-50: #FFFAF0;
-$yellow-50: #FFFFF0;
-
-$gold: #C69A33; // accent color
-$light-gold: #E0D5C0;
-$dark-gold: #946E24;
-$text: #5B5B5B;
-$catalog-bg: #F5F3EF;
-$very-light-gray: #EEEEEE;
-$product-bg:#F9F8F8;
-$coffee: #80746B;
+$gold: #c69a33; // accent color
+$light-gold: #e0d5c0;
+$dark-gold: #946e24;
+$text: #5b5b5b;
+$catalog-bg: #f5f3ef;
+$very-light-gray: #eeeeee;
+$product-bg: #f9f8f8;
+$coffee: #80746b;
 
 $offset-desktop: 30px;
 $offset-tablet: 30px;
@@ -44,28 +43,14 @@ $breakpoint-mobile: 767px;
 
 .swiper-container {
   @include margin-x(auto);
-  
-  @include not-mobile {
-    // max-width: 1280px;
-    // transform: translateX( calc($offset-desktop / 2));
-  }
+
   @include desktop-only {
     width: calc(100% - $offset-desktop);
-    // width: calc(100% - $offset-desktop * 2);
-    // transform: translateX( calc($offset-desktop / 2));
   }
   @include tablet-only {
     width: calc(100% - $offset-tablet);
-    // width: calc(100% - $offset-desktop);
-    // transform: translateX( calc($offset-desktop / 2));
-
   }
   @include mobile-only {
     width: calc(100% - $offset-mobile);
-    // transform: translateX(calc($offset-mobile / 2));
-  }
-  @include media-custom-min(1340px) {
-    // max-width: unset;
-    // width: calc(100% - 30px);
   }
 }
