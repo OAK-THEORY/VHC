@@ -10,7 +10,7 @@ resource "aws_route53_record" "alias_record" {
   }
 }
 
-resource "aws_route53_record" "www.alias_record" {
+resource "aws_route53_record" "www_alias_record" {
   zone_id = "Z0234196PUYV6WC2HAAI"
   name    = "www.vanderbiltshop.com"
   type    = "A"  # Use 'A' type for an Alias record
