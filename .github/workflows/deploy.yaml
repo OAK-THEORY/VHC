@@ -25,6 +25,14 @@ jobs:
             aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
             aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws-region: us-east-1 
+        
+        - name: Set up Python
+          uses: actions/setup-python@v2
+          with:
+            python-version: '3.x'
+    
+        - name: Install Boto3
+          run: pip install boto3
 
         - name: Run Make Init
           run: make init
