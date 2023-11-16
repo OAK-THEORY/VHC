@@ -6,9 +6,11 @@ import { Navigation } from '../components/Navigation';
 import { initCatalogSlider, initBannerSlider, initGiftSlider } from '../components/Swiper';
 import { videoPlaceholder } from '../components/Video.js';
 import { catalog } from '../components/Catalog.js';
+import { Header } from '../components/Header.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     Navigation();
+    Header();
     videoPlaceholder();
 
     catalog('#bowling-team', bowlingTeam);

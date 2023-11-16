@@ -1,8 +1,20 @@
-h1, h2, h3, h4, h5 {
-  font-family: 'libre-caslon-text';
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "libre-caslon-text";
 }
 
-p, span, a, div {
-  font-family: 'Inter';
+p,
+span,
+a,
+div {
+  font-family: "Inter";
 }
-
+html {
+  scroll-padding-top: 106px;
+  @include mobile-only {
+    scroll-padding-top: 89px;
+  }
+}

@@ -1,9 +1,16 @@
 .header {
-  @extend .fc;
   @include not-mobile {
     padding-top: 48px;
   }
+  @include mobile-only {
+    padding-top: 89px;
+  }
 
+  &_sticky {
+    @include not-mobile {
+      padding-top: 154px;
+    }
+  }
   &__top {
     background-color: $red-800;
     color: $white;
@@ -28,13 +35,28 @@
     }
   }
   &__bottom {
-    @extend .container;
-    @extend .flex-row-center-space-between;
-    @include padding-y(35px, 26px);
+    background-color: $white;
+    @include padding-y(30px);
     @include mobile-only {
       flex-direction: row-reverse;
 
       @include padding-y(26px);
+    }
+
+    &_sticky {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      z-index: 10;
+      max-width: 1440px;
+      transform: translateX(-50%);
+
+      & .container {
+        @include mobile-only {
+          flex-direction: row-reverse;
+        }
+      }
     }
   }
 }

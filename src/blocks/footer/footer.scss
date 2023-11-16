@@ -5,7 +5,7 @@
   @include padding-y(30px);
 
   &__wrapper {
-    @extend .flex-row-center-space-between;
+    @extend .frcsb;
     @extend .container;
     @include mobile-only {
       flex-direction: column;
