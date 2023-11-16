@@ -15,15 +15,12 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
-  
-
   enabled             = true
   is_ipv6_enabled     = true
   comment             = "VHC Cloudfront distribution"
   default_root_object = "index.html"
 
-
-#   aliases = ["mysite.example.com", "yoursite.example.com"]
+  aliases = ["vanderbiltshop.com", "www.vanderbiltshop.com"]
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
@@ -58,9 +55,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn = "arn:aws:acm:us-east-1:601626221892:certificate/695145ac-4a88-431d-bf7b-7d120d220c5c"
+    ssl_support_method  = "sni-only"
   }
 }
-
-
 
