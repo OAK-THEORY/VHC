@@ -40,7 +40,7 @@ jobs:
             aws s3 sync . s3://vhc-s3-bucket --exclude '.git/*' --exclude '.github/*' --exclude 'terraform/*' --exclude 'Makefile' --delete
 
         - name: Invalidate CloudFront Distribution
-          run: python terraform/invalidation.py
+          run: python terraform/invalidate.py
         
 
     
