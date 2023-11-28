@@ -54,3 +54,6 @@ $breakpoint-mobile: 767px;
     width: calc(100% - $offset-mobile);
   }
 }
+.changes {
+  display: none;
+}
