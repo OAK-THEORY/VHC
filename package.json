@@ -38,6 +38,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@hotjar/browser": "^1.0.9",
     "core-js": "^3.32.0",
     "fs.promises": "^0.1.2",
     "swiper": "^11.0.3"
