@@ -7,7 +7,15 @@ import { initCatalogSlider, initBannerSlider, initGiftSlider } from '../componen
 import { videoPlaceholder } from '../components/Video.js';
 import { catalog } from '../components/Catalog.js';
 import { Header } from '../components/Header.js';
+import Hotjar from '@hotjar/browser';
 
+// hotjar stuff
+const siteId = 3761526;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
+
+//default stuff
 document.addEventListener("DOMContentLoaded", () => {
     Navigation();
     Header();
