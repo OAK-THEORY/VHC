@@ -1209,15 +1209,51 @@
           >
         </div>
       </footer>
+      <div class="popup popup_banner">
+        <div class="popup__container">
+          <button
+            aria-label="Close popup button"
+            type="button"
+            class="popup__close-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <rect width="40" height="40" fill="black" />
+              <path
+                d="M15.0996 24.9999L25.0001 15.0001"
+                stroke="#FFEAEA"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M24.9004 24.9997L14.9999 14.9999"
+                stroke="#FFEAEA"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
       <template id="slide-card-template">
         <li class="swiper-slide">
           <div class="card">
             <div class="card__img-wrapper">
+              <span class="card__label"></span>
               <img class="card__img" src="" alt="" />
             </div>
             <div class="card__info">
               <span class="card__subtitle"></span>
               <h3 class="card__title"></h3>
+              <div class="card__discount">
+                <span class="card__discount-info"></span>
+                <span class="card__discount-code"></span>
+              </div>
             </div>
             <a target="_blank" href="#" class="link-button card__link"
               >Shop

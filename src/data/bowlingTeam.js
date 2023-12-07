@@ -13,7 +13,9 @@ export const bowlingTeam = [
     imagePath: image9,
     title: "Vanderbilt University Women's Crewneck Sweatshirt",
     subtitle: "Chicka-d",
-    link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/sweatshirts-women/w-warm-up-crew-swe-natur-1x---247962-1"
+    link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/sweatshirts-women/w-warm-up-crew-swe-natur-1x---247962-1",
+    discount: false
+
   },
   // {
   //   imagePath: image8,
@@ -25,42 +27,49 @@ export const bowlingTeam = [
     imagePath: image7,
     title: "Vanderbilt University Women's Boxy Long Sleeve Tee",
     subtitle: "Nike",
-    link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/t-shirts-tanks-women/w-cotton-boxy-lst-black-xs---715718-1"
+    link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/t-shirts-tanks-women/w-cotton-boxy-lst-black-xs---715718-1",
+    discount: false
   },
   {
     imagePath: image6,
     title: "Vanderbilt University Women’s ¼ Zip Top",
     subtitle: "League",
-    link: "https://www.bkstr.com/vanderbiltstore/product/wj-1-4zip-academy-oatht-sm---204607-1"
+    link: "https://www.bkstr.com/vanderbiltstore/product/wj-1-4zip-academy-oatht-sm---204607-1",
+    discount: false
   },
   {
     imagePath: image5,
     title: "Vanderbilt University Women's Hoodie",
     subtitle: "Pressbox",
-    link: "https://www.bkstr.com/vanderbiltstore/product/w-andies-sherpa-po-ivory-sm---268349-1"
+    link: "https://www.bkstr.com/vanderbiltstore/product/w-andies-sherpa-po-ivory-sm---268349-1",
+    discount: false
   },
   {
     imagePath: image4,
     title: "Vanderbilt University Women's Crop Short Sleeve T-Shirt",
     subtitle: "League",
-    link: "https://www.bkstr.com/vanderbiltstore/product/wj-sst-clothesline-wbeig-sm---929048-1"
+    link: "https://www.bkstr.com/vanderbiltstore/product/wj-sst-clothesline-wbeig-sm---929048-1",
+    discount: false
   },
   {
     imagePath: image3,
     title: "Vanderbilt University Men’s Crewneck",
     subtitle: "Nike",
-    link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/men/sweatshirts-men/crew-club-1-2c-ssn-black-sm---438866-1"
+    link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/men/sweatshirts-men/crew-club-1-2c-ssn-black-sm---438866-1",
+    discount: false
   },
   {
     imagePath: image2,
     title: "Vanderbilt University Women’s Cropped Hoodie",
     subtitle: "Uscape",
-    link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/wj-crop-hoodie-fsn-black-xs---725037-1"
+    link: "https://www.bkstr.com/vanderbiltstore/product/clothing-accessories/women/wj-crop-hoodie-fsn-black-xs---725037-1",
+    discount: false
   },
   {
     imagePath: image1,
     title: "Vanderbilt University Women's Commodores Crewneck",
     subtitle: "Gear for sports",
-    link: "https://www.bkstr.com/vanderbiltstore/product/w-relax-cree-3c-ss-black-sm---946351-1"
+    link: "https://www.bkstr.com/vanderbiltstore/product/w-relax-cree-3c-ss-black-sm---946351-1",
+    discount: false
   }
 ];

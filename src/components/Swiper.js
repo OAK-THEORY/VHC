@@ -25,11 +25,11 @@ export const initCatalogSlider = () => {
                 prevEl: prevButton,
             },
             breakpoints: {
-                1024: {
+                1200: {
                     slidesPerView: 3.5,
                 },
-                767: {
-                    slidesPerView: 2.5,
+                850: {
+                    slidesPerView: 2.8,
                     spaceBetween: 20,
                 },
                 320: {
