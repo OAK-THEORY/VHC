@@ -1,0 +1,10 @@
+.discount-label {
+  background-color: $red-discount;
+  padding: 4px 6px;
+  color: $white;
+  position: absolute;
+  border-radius: 4px;
+
+  @include font-params(12px, 700, 18px);
+  @extend .uppercase;
+}

@@ -46,8 +46,14 @@
     cursor: pointer;
     transition: opacity 0.2s ease;
     background-color: $near-black;
+    z-index: 21;
     &:hover {
       opacity: 0.6;
     }
+  }
+  &__link {
+    display: block;
+
+    @include box(100%);
   }
 }
