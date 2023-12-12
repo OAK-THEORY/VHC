@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Header();
     videoPlaceholder();
     const discountBanner = new Popup('.popup_banner');
-    // discountBanner.open();
+    discountBanner.open();
 
     catalog('#bowling-team', bowlingTeam);
     catalog('#noble-family', nobleFamily);
