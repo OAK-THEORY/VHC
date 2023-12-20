@@ -21,6 +21,7 @@
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: contain;
     @extend .fcc;
     @include desktop-only {
       @include box(568px, 339px);
