@@ -14,7 +14,7 @@ export const graduateHotel = [
     label: "50% off",
     discountInfo: "Enter code",
     discountCode: "FREESHIP49",
-    discount: true
+    discount: false
   },
   {
     imagePath: image5,
@@ -24,7 +24,7 @@ export const graduateHotel = [
     label: "50% off",
     discountInfo: "Enter code",
     discountCode: "FREESHIP49",
-    discount: true
+    discount: false
   },
   {
     imagePath: image4,
@@ -34,7 +34,7 @@ export const graduateHotel = [
     label: "50% off",
     discountInfo: "Enter code",
     discountCode: "FREESHIP49",
-    discount: true
+    discount: false
   },
   {
     imagePath: image2,
@@ -44,7 +44,7 @@ export const graduateHotel = [
     label: "50% off",
     discountInfo: "Enter code",
     discountCode: "FREESHIP49",
-    discount: true
+    discount: false
   },
   {
     imagePath: image1,
@@ -54,6 +54,6 @@ export const graduateHotel = [
     label: "50% off",
     discountInfo: "Enter code",
     discountCode: "FREESHIP49",
-    discount: true
+    discount: false
   }
 ];
