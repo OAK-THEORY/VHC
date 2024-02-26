@@ -11,6 +11,11 @@
       padding-top: 154px;
     }
   }
+
+  &_holding {
+    padding-top: 0;
+  }
+
   &__top {
     background-color: $red-800;
     color: $white;

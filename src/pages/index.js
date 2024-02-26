@@ -19,7 +19,7 @@ Hotjar.init(siteId, hotjarVersion);
 //default stuff
 document.addEventListener("DOMContentLoaded", () => {
     Navigation();
-    Header();
+    // Header();
     videoPlaceholder();
     const discountBanner = new Popup('.popup_banner');
     // discountBanner.open();
