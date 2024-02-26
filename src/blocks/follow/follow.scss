@@ -75,4 +75,59 @@
 
     @include box(100%);
   }
+
+  &_holding {
+    overflow: hidden;
+    position: relative;
+    @include desktop-only {
+      padding-top: 100px;
+    }
+
+    @include not-desktop {
+      padding-top: 140px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -10%;
+      width: 550px;
+      height: 194px;
+      background-image: url(../../images/quote-img-2.svg);
+      background-repeat: no-repeat;
+      transform: scale(-1, 1);
+
+      @include mobile-only {
+        background-size: 60%;
+      }
+      @include not-desktop {
+        top: 40px;
+      }
+    }
+
+    .follow__wrapper {
+      justify-content: center;
+      @include not-desktop {
+        align-items: center;
+      }
+      @include tablet-only {
+        padding-top: 100px;
+      }
+      @include mobile-only {
+        padding-top: 50px;
+      }
+    }
+    .follow__info {
+      align-items: center;
+    }
+    .follow__title {
+      text-align: center;
+      text-transform: initial;
+
+      span {
+        font-family: inherit;
+      }
+    }
+  }
 }

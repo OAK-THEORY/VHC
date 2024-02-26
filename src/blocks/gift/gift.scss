@@ -100,4 +100,14 @@
       }
     }
   }
+
+  &_holding {
+    padding: 0;
+
+    & .gift__subtitle {
+      color: $brown;
+      text-transform: uppercase;
+      @include font-params(16px, 700, 19px, 2px);
+    }
+  }
 }

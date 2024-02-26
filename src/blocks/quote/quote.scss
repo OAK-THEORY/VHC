@@ -145,4 +145,27 @@
       }
     }
   }
+
+  &_holding {
+    & .quote__info {
+      @include mobile-only {
+        max-width: 100%;
+      }
+    }
+    & .quote__title {
+      @include font-params(36px, 400);
+      @include mobile-only {
+        @include font-params(24px, 400);
+      }
+
+      i {
+        font-style: italic;
+
+        @include font-params(32px, 400);
+        @include mobile-only {
+          @include font-params(24px, 400);
+        }
+      }
+    }
+  }
 }
