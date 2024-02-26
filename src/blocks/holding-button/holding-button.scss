@@ -1,0 +1,25 @@
+.holding-button {
+  color: $white;
+  padding: 12px 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  flex-wrap: nowrap;
+  transition: opacity 0.2s ease-in-out;
+  justify-content: center;
+  gap: 6px;
+  @include font-params(12px, 700, 161.023%, 1.98px);
+  @extend .flex-row-center;
+  @include mobile-only {
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &_gold {
+    background-color: $gold;
+  }
+  &_brown {
+    background-color: $brown;
+  }
+}

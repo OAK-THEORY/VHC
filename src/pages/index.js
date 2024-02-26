@@ -9,6 +9,12 @@ import { videoPlaceholder } from '../components/Video.js';
 import { catalog } from '../components/Catalog.js';
 import { Header } from '../components/Header.js';
 import Hotjar from '@hotjar/browser';
+import VideoBox from '../components/VideoBox.js';
+import VideoBackground from '../components/VideoBackground.js';
+import wishVideoMp4 from '../../video/wish-video.mp4';
+import wishVideoWebm from '../../video/wish-video.webm';
+import heroVideoMp4 from '../../video/hero-bg.mp4';
+import heroVideoWebm from '../../video/hero-bg.webm';
 
 // hotjar stuff
 const siteId = 3761526;
@@ -20,7 +26,9 @@ Hotjar.init(siteId, hotjarVersion);
 document.addEventListener("DOMContentLoaded", () => {
     Navigation();
     // Header();
-    videoPlaceholder();
+    // videoPlaceholder();
+    new VideoBox(wishVideoMp4, wishVideoWebm, 'wish').init();
+    new VideoBackground(heroVideoMp4, heroVideoWebm, 'hero-holding').init();
     const discountBanner = new Popup('.popup_banner');
     // discountBanner.open();
 

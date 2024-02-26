@@ -1,0 +1,67 @@
+.hero-holding {
+  position: relative;
+  height: 660px;
+
+  @include tablet-only {
+    height: 560;
+  }
+
+  @include mobile-only {
+    height: 460px;
+  }
+
+  &__video {
+    object-fit: cover;
+
+    @include box(100%);
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+
+    @extend .container;
+    @extend .fcc;
+    @extend .fc;
+  }
+
+  &__title {
+    color: $white;
+    text-align: center;
+    margin: 0 0 24px 0;
+
+    @include font-params(110px, 400, 102%, -1.164px);
+    @include tablet-only {
+      font-size: 74px;
+    }
+
+    @include mobile-only {
+      font-size: 40px;
+    }
+  }
+
+  &__description {
+    color: $white;
+    text-align: center;
+    max-width: 560px;
+    margin: 0 0 32px 0;
+
+    @include font-params(16px, 400, 161%);
+    @include mobile-only {
+      font-size: 12px;
+      max-width: 420px;
+    }
+  }
+  &__buttons {
+    gap: 24px;
+
+    @extend .flex-row-center;
+    @include mobile-only {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
