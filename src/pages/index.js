@@ -24,19 +24,19 @@ Hotjar.init(siteId, hotjarVersion);
 
 //default stuff
 document.addEventListener("DOMContentLoaded", () => {
-    Navigation();
+    // Navigation();
     // Header();
     // videoPlaceholder();
     // new VideoBox(wishVideoMp4, wishVideoWebm, 'wish').init();
     new VideoBackground(heroVideoMp4, heroVideoWebm, 'hero-holding').init();
-    const discountBanner = new Popup('.popup_banner');
+    // const discountBanner = new Popup('.popup_banner');
     // discountBanner.open();
 
     // catalog('#bowling-team', bowlingTeam);
     // catalog('#noble-family', nobleFamily);
     // catalog('#graduate-hotel', graduateHotel);
 
-    initCatalogSlider();
-    initBannerSlider();
+    // initCatalogSlider();
+    // initBannerSlider();
     initGiftSlider();
 });
