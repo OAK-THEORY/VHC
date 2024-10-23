@@ -1,11 +1,12 @@
 .wish {
   display: flex;
+  flex-direction: column;
 
   @extend .container;
   @include not-mobile {
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    gap: 34px;
 
     @include padding-y(84px);
   }
@@ -40,17 +41,18 @@
     @include box(100%);
 
     @include desktop-only {
-      max-width: 893px;
+      max-width: 1200px;
     }
     position: relative;
     aspect-ratio: 16 / 9;
-    border-radius: 5px;
+    border-radius: 12px;
     overflow: hidden;
   }
   &__video {
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 12px;
 
     @include box(100%);
   }
@@ -62,7 +64,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../../images/wish-video-placeholder.webp);
+    background-image: url(../../images/wish-video-placeholder-dt.webp);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -74,6 +76,12 @@
     &.hidden {
       opacity: 0;
       visibility: hidden;
+    }
+
+    @include mobile-only {
+      // background-image: url(../../images/wish-video-placeholder-mb.webp);
+      // background-color: $black;
+      // background-size: auto;
     }
   }
 

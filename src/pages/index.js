@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Navigation();
     Header();
     // videoPlaceholder();
-    // new VideoBox(wishVideoMp4, wishVideoWebm, 'wish').init();
+    new VideoBox(wishVideoMp4, wishVideoWebm, 'wish').init();
     // new VideoBackground(heroVideoMp4, heroVideoWebm, 'hero-holding').init();
     // const discountBanner = new Popup('.popup_banner');
     // discountBanner.open();
