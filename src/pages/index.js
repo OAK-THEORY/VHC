@@ -24,11 +24,11 @@ Hotjar.init(siteId, hotjarVersion);
 
 //default stuff
 document.addEventListener("DOMContentLoaded", () => {
-    // Navigation();
-    // Header();
+    Navigation();
+    Header();
     // videoPlaceholder();
     // new VideoBox(wishVideoMp4, wishVideoWebm, 'wish').init();
-    new VideoBackground(heroVideoMp4, heroVideoWebm, 'hero-holding').init();
+    // new VideoBackground(heroVideoMp4, heroVideoWebm, 'hero-holding').init();
     // const discountBanner = new Popup('.popup_banner');
     // discountBanner.open();
 

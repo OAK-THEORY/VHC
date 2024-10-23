@@ -5,7 +5,7 @@ export const Navigation = () => {
   if (!navigation) return;
 
   const button = navigation.querySelector(`.${mainClass}__button`);
-  const list = navigation.querySelector(`.${mainClass}__list`);
+  const list = navigation.querySelector(`.${mainClass}__list_mobile`);
   const links = navigation.querySelectorAll(`.${mainClass}__link`);
 
   function removeActiveClass() {

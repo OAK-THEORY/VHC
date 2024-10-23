@@ -33,19 +33,17 @@ export const Header = () => {
     }
     addWindowScrollListener();
   }
+  enableForDesktop()
 
-  if (window.innerWidth >= 767) enableForDesktop();
-  window.addEventListener('resize', () => {
-    if (window.innerWidth < 767) {
-      addStickyMode();
-      window.removeEventListener('scroll', toggleStickyMode);
+  // For desktop only sticky header
+  // if (window.innerWidth >= 767) enableForDesktop();
+  // window.addEventListener('resize', () => {
+  //   if (window.innerWidth < 767) {
+  //     addStickyMode();
+  //     window.removeEventListener('scroll', toggleStickyMode);
 
-    } else {
-      enableForDesktop();
-    };
-  });
-
-
-
-
+  //   } else {
+  //     enableForDesktop();
+  //   };
+  // });
 }

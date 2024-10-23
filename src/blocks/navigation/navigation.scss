@@ -9,6 +9,12 @@
     background: unset;
     cursor: pointer;
     border: none;
+    // hide for now icon and text
+    & > svg,
+    &::before {
+      display: none;
+      visibility: hidden;
+    }
 
     @include not-mobile {
       gap: 8px;
@@ -48,9 +54,14 @@
       }
     }
   }
-
-  &__list {
-    @extend .reset-list;
+  &__list_desktop {
+    display: none;
+    @include not-mobile {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  &__list_mobile {
     @extend .fc;
 
     gap: 16px;
@@ -70,6 +81,9 @@
       left: unset;
       right: 0;
     }
+  }
+  &__list {
+    @extend .reset-list;
 
     &_active {
       opacity: 1;
