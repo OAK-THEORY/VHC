@@ -26,10 +26,10 @@ export const initCatalogSlider = () => {
             },
             breakpoints: {
                 1200: {
-                    slidesPerView: 3.5,
+                    slidesPerView: 3,
                 },
                 850: {
-                    slidesPerView: 2.8,
+                    slidesPerView: 2,
                     spaceBetween: 20,
                 },
                 320: {

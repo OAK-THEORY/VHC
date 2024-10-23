@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // const discountBanner = new Popup('.popup_banner');
     // discountBanner.open();
 
-    // catalog('#bowling-team', bowlingTeam);
-    // catalog('#noble-family', nobleFamily);
-    // catalog('#graduate-hotel', graduateHotel);
+    catalog('#apparel', bowlingTeam);
+    catalog('#noble-family', nobleFamily);
+    catalog('#graduate-hotel', graduateHotel);
 
-    // initCatalogSlider();
+    initCatalogSlider();
     // initBannerSlider();
     initGiftSlider();
 });

@@ -1,39 +1,6 @@
 .catalog {
-  &__banner {
-    position: relative;
-    height: 100%;
-    align-items: end;
-
-    @include not-mobile {
-      min-height: 683px;
-    }
-    @include mobile-only {
-      max-height: 200px;
-    }
-
-    & .swiper {
-      height: 683px;
-
-      @include mobile-only {
-        max-height: 200px;
-      }
-
-      &-banner {
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        @include box(100%);
-        @include not-mobile {
-          background-position: center center;
-        }
-        @include mobile-only {
-          background-position: 50% 15%;
-          background-size: 130% auto;
-        }
-      }
-    }
-  }
-
+  padding-top: 70px;
+  padding-bottom: 70px;
   &__info {
     position: absolute;
     width: 100%;
@@ -68,11 +35,11 @@
 
   &__description,
   &__title {
-    color: $white;
+    color: $black;
   }
 
   &__swiper {
-    background-color: $catalog-bg;
+    // background-color: $catalog-bg;
 
     @include mobile-only {
       padding-top: 24px;
@@ -86,7 +53,6 @@
         flex-direction: column-reverse;
         row-gap: 30px;
         align-items: flex-end;
-        margin-top: -160px;
       }
 
       &-slide {
