@@ -43,6 +43,7 @@
       z-index: 10;
       max-width: 1440px;
       transform: translateX(-50%);
+      border-bottom: 1px solid $gray-50;
 
       & .container {
         @include mobile-only {

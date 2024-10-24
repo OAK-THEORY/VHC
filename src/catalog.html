@@ -455,24 +455,38 @@
             </div>
           </div>
         </section>
-        <section class="quote quote_v2">
-          <div class="quote__wrapper">
-            <div class="quote__info">
-              <h3 class="quote__title">
-                <q
-                  >My favorite Vanderbilt tradition is the team holiday party,
-                  with our gift exchange before we leave for break.</q
+        <section class="tooltip-banner" id="tooltip-banner-1">
+          <div class="tooltip-banner__wrapper">
+            <div class="tooltip-banner__background">
+              <div class="tooltip-banner__button-wrapper" data="tooltip-1">
+                <button
+                  type="button"
+                  class="tooltip-banner__button"
+                  aria-labelledby="item-1"
                 >
-              </h3>
-              <div class="quote__author">
-                <img
-                  class="quote__author-img"
-                  src="<%=require('../images/author-2.webp')%>"
-                  alt="Author photo"
-                />
-                <span class="quote__author-name uppercase"
-                  >Amanda Naujokas, Class of 2024</span
+                  <span class="tooltip-banner__button-center"></span>
+                  <span class="tooltip-banner__button-shadow"></span>
+                </button>
+              </div>
+              <div class="tooltip-banner__button-wrapper" data="tooltip-2">
+                <button
+                  type="button"
+                  class="tooltip-banner__button"
+                  aria-labelledby="item-2"
                 >
+                  <span class="tooltip-banner__button-center"></span>
+                  <span class="tooltip-banner__button-shadow"></span>
+                </button>
+              </div>
+              <div class="tooltip-banner__button-wrapper" data="tooltip-3">
+                <button
+                  type="button"
+                  class="tooltip-banner__button"
+                  aria-labelledby="item-3"
+                >
+                  <span class="tooltip-banner__button-center"></span>
+                  <span class="tooltip-banner__button-shadow"></span>
+                </button>
               </div>
             </div>
           </div>
@@ -566,31 +580,6 @@
                     />
                   </svg>
                 </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="quote quote_v1">
-          <div class="quote__wrapper">
-            <div class="quote__info">
-              <h3 class="quote__title">
-                <q
-                  >Our holiday traditions span from December to Kwanzaa. Charly,
-                  our Elf on a Shelf, reappears magically, leaving the kids a
-                  daily riddle for hidden treats. Witnessing their smiles and
-                  teamwork makes each day extra special.</q
-                >
-              </h3>
-              <div class="quote__author">
-                <img
-                  class="quote__author-img"
-                  src="<%=require('../images/author-1.webp')%>"
-                  alt="Author photo"
-                />
-                <span class="quote__author-name uppercase"
-                  >Rosevelt Noble, Associate Dean of Students for Equity,
-                  Diversity, and Inclusion at Vanderbilt University
-                </span>
               </div>
             </div>
           </div>
@@ -1142,6 +1131,30 @@
             </a>
           </div>
         </li>
+      </template>
+      <template id="tooltip-card-template">
+        <div class="tooltip-banner__card" role="tooltip">
+          <h3 class="card__title"></h3>
+          <a target="_blank" href="#" class="link-button card__link"
+            >Shop
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M13.2675 7.12627C13.1027 7.12627 12.9446 7.19176 12.8281 7.30828C12.7116 7.4248 12.6461 7.58286 12.6461 7.74767V12.7189H2.70373V2.77649H7.67492C7.89692 2.77649 8.10208 2.65803 8.21306 2.46579C8.32409 2.27354 8.32409 2.03664 8.21306 1.84439C8.10208 1.65214 7.89692 1.53369 7.67492 1.53369H2.08234C1.91752 1.53369 1.75946 1.59918 1.64294 1.7157C1.52643 1.83222 1.46094 1.99028 1.46094 2.15509V13.3403C1.46094 13.5051 1.52643 13.6631 1.64294 13.7796C1.75946 13.8962 1.91753 13.9616 2.08234 13.9616H13.2675C13.4323 13.9616 13.5904 13.8962 13.7069 13.7796C13.8234 13.6631 13.8889 13.5051 13.8889 13.3403V7.74767C13.8889 7.58285 13.8234 7.42479 13.7069 7.30828C13.5904 7.19177 13.4323 7.12627 13.2675 7.12627Z"
+                fill="#C69A33"
+              />
+              <path
+                d="M13.504 1.57961C13.4287 1.54839 13.348 1.53213 13.2666 1.53174H10.1596C9.93759 1.53174 9.73243 1.65019 9.62145 1.84244C9.51042 2.03469 9.51042 2.27159 9.62145 2.46384C9.73242 2.65608 9.93759 2.77453 10.1596 2.77453H11.7665L7.23467 7.30639H7.23462C7.11476 7.42222 7.0464 7.58131 7.04495 7.74797C7.04349 7.91463 7.10908 8.07493 7.22695 8.19275C7.34478 8.31062 7.50508 8.37621 7.67174 8.37476C7.8384 8.3733 7.99749 8.30495 8.11332 8.18508L12.6452 3.65323V5.26016C12.6452 5.48216 12.7636 5.68732 12.9559 5.79831C13.1481 5.90933 13.385 5.90933 13.5773 5.79831C13.7695 5.68733 13.888 5.48216 13.888 5.26016V2.15317C13.8878 2.0303 13.8513 1.91024 13.7829 1.80815C13.7146 1.7061 13.6175 1.62654 13.504 1.57964L13.504 1.57961Z"
+                fill="#C69A33"
+              />
+            </svg>
+          </a>
+        </div>
       </template>
     </div>
     <!-- Google Tag Manager (noscript.) -->

@@ -1,0 +1,141 @@
+.tooltip-banner {
+  &__wrapper {
+    display: grid;
+    grid-template-rows: minmax(100%, 755px);
+    @include tablet-only {
+      grid-template-rows: minmax(100%, 60dvh);
+    }
+    @include mobile-only {
+      position: relative;
+      grid-template-rows: minmax(100%, 40dvh) 0 0 0;
+      overflow: hidden;
+      transition: grid-template-rows 0.2s ease-in-out;
+      &.active {
+        grid-template-rows: minmax(100%, 40dvh) 1fr 0 0;
+      }
+    }
+  }
+
+  &__background {
+    background-image: url(../../images/tooltips/banners/tooltip-banner-bg-v1.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    gap: 25px;
+    position: relative;
+  }
+  &_v1 {
+    // flex-direction: column;
+    // border-radius: 10px;
+    // min-height: 755px;
+  }
+  &__button-wrapper {
+    &[data="tooltip-1"] {
+      position: absolute;
+      left: 27%;
+      top: 50%;
+    }
+    &[data="tooltip-2"] {
+      position: absolute;
+      left: 58%;
+      top: 87%;
+    }
+    &[data="tooltip-3"] {
+      position: absolute;
+      right: 25%;
+      top: 60%;
+    }
+  }
+
+  &__button {
+    @include box(34px);
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    box-shadow: unset;
+    border: none;
+    &-center {
+      @include box(20px);
+      display: block;
+      background-color: $white;
+      transition: background-color 0.2s ease-in-out;
+    }
+    &-shadow {
+      @include box(100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.3);
+      animation: tooltip-scale 3s ease-in-out infinite;
+    }
+    &,
+    &-center,
+    &-shadow {
+      border-radius: 50%;
+    }
+    &:hover &-center {
+      background-color: $light-gold;
+    }
+    &.active &-center {
+      background-color: $light-gold;
+    }
+  }
+  &__card {
+    @include not-mobile {
+      &_mobile {
+        display: none;
+        visibility: hidden;
+      }
+    }
+    @include mobile-only {
+      &_desktop {
+        display: none;
+        visibility: hidden;
+      }
+      &_mobile {
+        position: absolute;
+        bottom: -25%;
+        left: 0;
+      }
+      &.active {
+        position: relative;
+        bottom: 0;
+      }
+    }
+    &_desktop {
+      transform: translateX(-50%);
+      position: absolute;
+      min-width: 450px;
+      top: 44px;
+      left: 0;
+    }
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    max-width: 450px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    padding: 40px 54px 24px 24px;
+  }
+}
+
+@keyframes tooltip-scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}

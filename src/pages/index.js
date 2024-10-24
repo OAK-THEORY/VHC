@@ -15,6 +15,7 @@ import wishVideoMp4 from '../../video/wish-video.mp4';
 import wishVideoWebm from '../../video/wish-video.webm';
 import heroVideoMp4 from '../../video/hero-bg.mp4';
 import heroVideoWebm from '../../video/hero-bg.webm';
+import { TooltipInit } from '../components/Tooltip.js';
 
 // hotjar stuff
 const siteId = 3761526;
@@ -39,4 +40,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initCatalogSlider();
     // initBannerSlider();
     initGiftSlider();
+    TooltipInit('tooltip-banner-1', bowlingTeam);
 });
